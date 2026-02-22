@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ebe6e4;
+  --background-secondary: #ded9d7;
+  --foreground: #402622;
+  --primary: #d97e57;
+  --secondary: #00b5ff;
+  --accent: #00b5ff;
+  --error: #ff0000;
+  --warning: #ff0000;
+  --success: #00b5ff;
+  --info: #00b5ff;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-error: var(--error);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+  --color-info: var(--info);
+}
+
+h1.normal {
+  @apply text-2xl font-extrabold;
+}
+
+p.tiny {
+  @apply text-sm opacity-50;
+}
+
+.auth_type_switcher {
+  @apply w-1/2 z-20 text-sm flex justify-center items-center cursor-pointer;
+}
+
+input.login {
+  @apply w-full h-12 pl-[15%] rounded-xl bg-background py-2 px-4 outline-none focus:outline-none;
+}
