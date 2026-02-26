@@ -7,7 +7,7 @@ export default function AuthTypeSwitcher() {
   const dispatch = useDispatch();
 
   return (
-    <div className="w-full rounded-xl flex items-center p-3 relative bg-background-secondary">
+    <div className="w-full shadow-lg shadow-black/10 rounded-xl flex items-center p-3 relative bg-background-secondary">
       <div className="auth_type_switcher" onClick={() => dispatch(setAuthType("login"))}>
         <span className="text-foreground">ورود</span>
       </div>

@@ -26,11 +26,15 @@
   --color-info: var(--info);
 }
 
+body {
+  @apply bg-background;
+}
+
 h1.normal {
   @apply text-2xl font-extrabold;
 }
 
-p.tiny {
+.tiny {
   @apply text-sm opacity-50;
 }
 
@@ -40,4 +44,12 @@ p.tiny {
 
 input.login {
   @apply w-full h-12 pl-[15%] rounded-xl bg-background py-2 px-4 outline-none focus:outline-none;
+}
+
+.otp_container input {
+  @apply w-1/4 aspect-square shadow-2xl shadow-black/50 border border-black/10 rounded-xl bg-background-secondary outline-none focus:outline-none text-center text-2xl;
+}
+
+button.auth_button {
+  @apply w-full h-14 rounded-xl flex justify-center items-center gap-2 bg-primary shadow-xl shadow-black/20 cursor-pointer;
 }
