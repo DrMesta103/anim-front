@@ -8,8 +8,8 @@ const modam = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Dorema",
-  description: "this is the dorema description",
+  title: "Robin Clinic",
+  description: "an application for managing clinic systems",
 };
 
 export default function RootLayout({
@@ -19,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa-ir" dir="rtl">
-      <body className={`${modam.className}`}>{children}</body>
+      <body className={`${modam.className}`}>
+        <main className="w-full overflow-x-hidden mx-auto min-h-screen flex flex-col">{children}</main>
+      </body>
     </html>
   );
 }

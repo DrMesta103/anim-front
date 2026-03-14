@@ -1,0 +1,67 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#F0F4F2"/>
+
+  <!-- SIDEBAR -->
+  <rect width="260" height="800" fill="white"/>
+  <rect x="259" y="0" width="1" height="800" fill="#CAD2C5"/> <!-- Border -->
+
+  <!-- Logo -->
+  <rect x="30" y="40" width="40" height="40" rx="10" fill="#CAD2C5"/>
+  <path d="M42 52C42 50.8954 42.8954 50 44 50H56C57.1046 50 58 50.8954 58 52V68C58 69.1046 57.1046 70 56 70H44C42.8954 70 42 69.1046 42 68V52Z" stroke="#52796F" stroke-width="2"/>
+  <text x="85" y="68" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2F3E46">SageClinic</text>
+
+  <!-- Sidebar Items -->
+  <!-- Active State: Dashboard -->
+  <rect x="20" y="130" width="220" height="50" rx="12" fill="#52796F"/>
+  <text x="70" y="162" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="white">Dashboard</text>
+  <circle cx="45" cy="155" r="3" fill="white"/>
+
+  <!-- Other Items -->
+  <text x="70" y="222" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Specialties</text>
+  <text x="70" y="282" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Rooms</text>
+  <text x="70" y="342" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Doctors</text>
+  <text x="70" y="402" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Secretaries</text>
+
+  <!-- TOP BAR -->
+  <text x="290" y="60" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2F3E46">Admin Dashboard</text>
+  <circle cx="1120" cy="55" r="20" fill="#CAD2C5"/>
+  <text x="1020" y="60" font-family="Arial, sans-serif" font-size="14" fill="#2F3E46" text-anchor="end">Pooya Admin</text>
+
+  <!-- DASHBOARD CONTENT -->
+
+  <!-- Stats Grid -->
+  <!-- Box 1: Doctors -->
+  <rect x="290" y="110" width="200" height="120" rx="25" fill="white" filter="url(#shadow)"/>
+  <text x="320" y="150" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Total Doctors</text>
+  <text x="320" y="195" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#2F3E46">24</text>
+
+  <!-- Box 2: Rooms -->
+  <rect x="520" y="110" width="200" height="120" rx="25" fill="white" filter="url(#shadow)"/>
+  <text x="550" y="150" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Active Rooms</text>
+  <text x="550" y="195" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#2F3E46">12 / 15</text>
+
+  <!-- Box 3: Patients -->
+  <rect x="750" y="110" width="200" height="120" rx="25" fill="white" filter="url(#shadow)"/>
+  <text x="780" y="150" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Daily Patients</text>
+  <text x="780" y="195" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#2F3E46">148</text>
+
+  <!-- Main Chart Area (Visual Representation) -->
+  <rect x="290" y="260" width="660" height="300" rx="30" fill="white" filter="url(#shadow)"/>
+  <text x="320" y="305" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2F3E46">Weekly Schedule Traffic</text>
+  <!-- Decorative Graph Line -->
+  <path d="M320 480 Q 400 420, 480 450 T 640 380 T 800 410 T 920 340" stroke="#52796F" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M320 480 Q 400 420, 480 450 T 640 380 T 800 410 T 920 340 V 500 H 320 Z" fill="#52796F" opacity="0.1"/>
+
+  <!-- Right Side: Reminders/Recent Canceled -->
+  <rect x="980" y="110" width="190" height="450" rx="30" fill="#CAD2C5" opacity="0.4"/>
+
+  <text x="1000" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2F3E46">Reminders</text>
+
+  <rect x="995" y="175" width="160" height="60" rx="15" fill="white"/>
+  <text x="1005" y="200" font-family="Arial, sans-serif" font-size="11" fill="#2F3E46">Room 4 Maintenance</text>
+  <text x="1005" y="218" font-family="Arial, sans-serif" font-size="10" fill="#84A98C">Starts at 02:00 PM</text>
+
+  <rect x="995" y="245" width="160" height="60" rx="15" fill="white"/>
+  <text x="1005" y="270" font-family="Arial, sans-serif" font-size="11" fill="#FF0000" />
+  </svg>

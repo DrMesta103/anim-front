@@ -1,55 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ebe6e4;
-  --background-secondary: #ded9d7;
-  --foreground: #402622;
-  --primary: #d97e57;
-  --secondary: #00b5ff;
-  --accent: #00b5ff;
+  --background: #f0f4f2;
+  --text: #2f3e46;
+  --primary: #52796f;
+  --secondary: #84a98c;
+  --accent: #cad2c5;
   --error: #ff0000;
-  --warning: #ff0000;
-  --success: #00b5ff;
-  --info: #00b5ff;
 }
 
 @theme {
   --color-background: var(--background);
-  --color-background-secondary: var(--background-secondary);
-  --color-foreground: var(--foreground);
+  --color-text: var(--text);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
   --color-error: var(--error);
-  --color-warning: var(--warning);
-  --color-success: var(--success);
-  --color-info: var(--info);
+
+  --breakpoint-xsmall: 450px;
+  --breakpoint-xlarge: 1470px;
 }
 
 body {
   @apply bg-background;
 }
 
-h1.normal {
-  @apply text-2xl font-extrabold;
+@layer components {
+  .login_input {
+    @apply w-full px-6 py-4 rounded-2xl border-2 border-accent bg-transparent 
+           text-text focus:border-primary focus:outline-none 
+           transition-all duration-300 placeholder:text-gray-300;
+  }
 }
 
-.tiny {
-  @apply text-sm opacity-50;
-}
+@layer components {
+  .sidebar-item {
+    @apply flex items-center gap-4 px-6 py-4 rounded-2xl transition-all duration-300 cursor-pointer font-semibold;
+  }
+  .sidebar-item-active {
+    @apply bg-primary text-white shadow-lg shadow-primary/20;
+  }
+  .sidebar-item-inactive {
+    @apply text-secondary hover:bg-accent/20 hover:text-text;
+  }
 
-.auth_type_switcher {
-  @apply w-1/2 z-20 text-sm flex justify-center items-center cursor-pointer;
-}
+  .stat-card {
+    @apply bg-white p-6 rounded-[2rem] shadow-[0_10px_30px_rgba(47,62,70,0.05)] border border-accent/10;
+  }
 
-input.login {
-  @apply w-full h-12 pl-[15%] rounded-xl bg-background py-2 px-4 outline-none focus:outline-none;
-}
-
-.otp_container input {
-  @apply w-1/4 aspect-square shadow-2xl shadow-black/50 border border-black/10 rounded-xl bg-background-secondary outline-none focus:outline-none text-center text-2xl;
-}
-
-button.auth_button {
-  @apply w-full h-14 rounded-xl flex justify-center items-center gap-2 bg-primary shadow-xl shadow-black/20 cursor-pointer;
+  .table-header {
+    @apply text-xs font-bold text-secondary uppercase tracking-wider pb-4 px-4 text-right;
+  }
+  .table-cell {
+    @apply py-4 px-4 text-sm text-text border-t border-background;
+  }
 }

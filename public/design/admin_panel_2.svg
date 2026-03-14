@@ -1,0 +1,59 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#F0F4F2"/>
+
+  <!-- SIDEBAR -->
+  <rect width="260" height="800" fill="white"/>
+  <rect x="259" y="0" width="1" height="800" fill="#CAD2C5"/> 
+
+  <!-- Logo Section -->
+  <rect x="30" y="40" width="45" height="45" rx="12" fill="#52796F"/>
+  <path d="M42 55L48 61L63 46" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="85" y="72" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#2F3E46">SageClinic</text>
+
+  <!-- Sidebar Navigation -->
+  <!-- Active State: Dashboard -->
+  <rect x="20" y="130" width="220" height="50" rx="15" fill="#52796F"/>
+  <text x="70" y="162" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="white">Dashboard</text>
+  <rect x="35" y="148" width="14" height="14" rx="3" fill="white" opacity="0.9"/>
+
+  <!-- Inactive Items -->
+  <g opacity="0.7">
+    <text x="70" y="222" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#2F3E46">Specialties</text>
+    <rect x="35" y="208" width="14" height="14" rx="3" stroke="#84A98C" stroke-width="2"/>
+
+    <text x="70" y="282" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#2F3E46">Rooms</text>
+    <rect x="35" y="268" width="14" height="14" rx="3" stroke="#84A98C" stroke-width="2"/>
+
+    <text x="70" y="342" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#2F3E46">Doctors</text>
+    <rect x="35" y="328" width="14" height="14" rx="3" stroke="#84A98C" stroke-width="2"/>
+
+    <text x="70" y="402" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#2F3E46">Secretaries</text>
+    <rect x="35" y="388" width="14" height="14" rx="3" stroke="#84A98C" stroke-width="2"/>
+  </g>
+
+  <!-- MAIN CONTENT AREA -->
+  <!-- Top Bar -->
+  <text x="300" y="70" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#2F3E46">Dashboard Overview</text>
+  <rect x="1000" y="40" width="170" height="50" rx="25" fill="white"/>
+  <circle cx="1025" cy="65" r="15" fill="#CAD2C5"/>
+  <text x="1050" y="70" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#2F3E46">Admin Pooya</text>
+
+  <!-- Stats Cards -->
+  <!-- Card 1: Doctors -->
+  <rect x="300" y="120" width="200" height="120" rx="25" fill="white"/>
+  <text x="330" y="160" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Total Doctors</text>
+  <text x="330" y="205" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#2F3E46">24</text>
+  <rect x="440" y="180" width="40" height="20" rx="10" fill="#F0F4F2"/>
+  <text x="448" y="194" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#52796F">+2</text>
+
+  <!-- Card 2: Specialties -->
+  <rect x="530" y="120" width="200" height="120" rx="25" fill="white"/>
+  <text x="560" y="160" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Specialties</text>
+  <text x="560" y="205" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#2F3E46">08</text>
+
+  <!-- Card 3: Active Rooms -->
+  <rect x="760" y="120" width="200" height="120" rx="25" fill="white"/>
+  <text x="790" y="160" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Active Rooms</text>
+  <text x="790" y="205" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#2F3E46">12/15</text>
+  </svg>
