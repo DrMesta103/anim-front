@@ -64,4 +64,35 @@
   <!-- Table Row 2 -->
   <text x="320" y="330" font-family="Arial, sans-serif" font-size="14" fill="#2F3E46">2</text>
   <text x="355" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Neurology</text>
-  </svg>
+<text x="550" y="330" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Brain and nervous system disorders</text>
+  <text x="750" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#52796F">NEURO-002</text>
+  <text x="950" y="330" font-family="Arial, sans-serif" font-size="14" fill="#52796F">✏️ 🗑️</text>
+
+  <!-- Table Row 3 -->
+  <text x="320" y="375" font-family="Arial, sans-serif" font-size="14" fill="#2F3E46">3</text>
+  <text x="355" y="375" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Pediatrics</text>
+  <text x="550" y="375" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Child and adolescent health</text>
+  <text x="750" y="375" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#52796F">PED-003</text>
+  <text x="950" y="375" font-family="Arial, sans-serif" font-size="14" fill="#52796F">✏️ 🗑️</text>
+
+  <!-- Table Row 4 -->
+  <text x="320" y="420" font-family="Arial, sans-serif" font-size="14" fill="#2F3E46">4</text>
+  <text x="355" y="420" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Orthopedics</text>
+  <text x="550" y="420" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Bone, joint, and muscle disorders</text>
+  <text x="750" y="420" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#52796F">ORTHO-004</text>
+  <text x="950" y="420" font-family="Arial, sans-serif" font-size="14" fill="#52796F">✏️ 🗑️</text>
+
+  <!-- Table Row 5 -->
+  <text x="320" y="465" font-family="Arial, sans-serif" font-size="14" fill="#2F3E46">5</text>
+  <text x="355" y="465" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Dermatology</text>
+  <text x="550" y="465" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Skin and cosmetic health</text>
+  <text x="750" y="465" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#52796F">DERM-005</text>
+  <text x="950" y="465" font-family="Arial, sans-serif" font-size="14" fill="#52796F">✏️ 🗑️</text>
+
+  <!-- Shadow Filter Definition -->
+  <defs>
+    <filter id="shadow" x="0" y="0" width="1200" height="800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#2F3E46" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+</svg>

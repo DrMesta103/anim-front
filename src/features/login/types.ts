@@ -1,11 +1,8 @@
-export interface AuthState {
-  type: "login" | "register";
+export interface LoginDataType {
+  username: string;
+  password: string;
+}
+export interface LoginState {
   status: "idle" | "loading" | "success" | "error";
-  data: {
-    firstname: string;
-    lastname: string;
-    phone: string;
-    otp: string[];
-  };
-  isCodeSent: boolean;
+  data: LoginDataType;
 }

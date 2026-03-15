@@ -1,0 +1,111 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#F0F4F2"/>
+
+  <!-- SIDEBAR -->
+  <rect width="260" height="800" fill="white"/>
+  <rect x="259" y="0" width="1" height="800" fill="#CAD2C5"/> <!-- Border -->
+
+  <!-- Logo -->
+  <rect x="30" y="40" width="40" height="40" rx="10" fill="#CAD2C5"/>
+  <path d="M42 52C42 50.8954 42.8954 50 44 50H56C57.1046 50 58 50.8954 58 52V68C58 69.1046 57.1046 70 56 70H44C42.8954 70 42 69.1046 42 68V52Z" stroke="#52796F" stroke-width="2"/>
+  <text x="85" y="68" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2F3E46">SageClinic</text>
+
+  <!-- Sidebar Items -->
+  <!-- Inactive State: Dashboard -->
+  <text x="70" y="162" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#84A98C">Dashboard</text>
+  <circle cx="45" cy="155" r="3" fill="#84A98C"/>
+
+  <!-- Inactive State: Specialties -->
+  <text x="70" y="252" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#84A98C">Specialties</text>
+  <circle cx="45" cy="245" r="3" fill="#84A98C"/>
+
+  <!-- Active State: Rooms -->
+  <rect x="20" y="310" width="220" height="50" rx="12" fill="#52796F"/>
+  <text x="70" y="342" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="white">Rooms</text>
+  <circle cx="45" cy="335" r="3" fill="white"/>
+
+  <!-- Other Items -->
+  <text x="70" y="402" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Doctors</text>
+  <text x="70" y="462" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Secretaries</text>
+
+  <!-- TOP BAR -->
+  <text x="290" y="60" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2F3E46">Doctors Management</text>
+  <circle cx="1120" cy="55" r="20" fill="#CAD2C5"/>
+
+  <!-- ACTION BAR -->
+  <rect x="290" y="90" width="900" height="50" rx="15" fill="white" filter="url(#shadow)"/>
+  <text x="315" y="120" font-family="Arial, sans-serif" font-size="14" fill="#2F3E46">Search...</text>
+  <rect x="1120" y="98" width="60" height="34" rx="8" fill="#52796F"/>
+  <text x="1145" y="121" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">+ Add</text>
+
+  <!-- MAIN CONTENT AREA -->
+  <!-- Page Title -->
+  <text x="290" y="170" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2F3E46">All Doctors</text>
+
+  <!-- Table Container -->
+  <rect x="290" y="200" width="890" height="350" rx="30" fill="white" filter="url(#shadow)"/>
+    <!-- Table Header for Doctors -->
+  <text x="320" y="235" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#84A98C">ID</text>
+  <text x="380" y="235" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#84A98C">First Name</text>
+  <text x="490" y="235" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#84A98C">Last Name</text>
+  <text x="600" y="235" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#84A98C">Phone</text>
+  <text x="750" y="235" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#84A98C">Medical Code</text>
+  <text x="870" y="235" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#84A98C">Specialty</text>
+  <text x="970" y="235" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#84A98C">Actions</text>
+
+  <rect x="320" y="250" width="750" height="1" fill="#F0F4F2"/>
+
+  <!-- Table Row 1 -->
+  <text x="320" y="285" font-family="Arial, sans-serif" font-size="14" fill="#2F3E46">1</text>
+  <text x="365" y="285" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Ali</text>
+  <text x="490" y="285" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Rezaei</text>
+  <text x="600" y="285" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">09123456789</text>
+  <text x="750" y="285" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#52796F">MD-10234</text>
+  <text x="870" y="285" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Cardiology</text>
+  <text x="970" y="285" font-family="Arial, sans-serif" font-size="14" fill="#52796F">✏️ 🗑️</text>
+
+  <!-- Table Row 2 -->
+  <text x="320" y="330" font-family="Arial, sans-serif" font-size="14" fill="#2F3E46">2</text>
+  <text x="365" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Sarah</text>
+  <text x="490" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Ahmadi</text>
+  <text x="600" y="330" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">09198765432</text>
+  <text x="750" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#52796F">MD-10567</text>
+  <text x="870" y="330" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Neurology</text>
+  <text x="970" y="330" font-family="Arial, sans-serif" font-size="14" fill="#52796F">✏️ 🗑️</text>
+
+  <!-- Table Row 3 -->
+  <text x="320" y="375" font-family="Arial, sans-serif" font-size="14" fill="#2F3E46">3</text>
+  <text x="365" y="375" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Mohammad</text>
+  <text x="490" y="375" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Karimi</text>
+  <text x="600" y="375" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">09129876543</text>
+  <text x="750" y="375" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#52796F">MD-10892</text>
+  <text x="870" y="375" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Pediatrics</text>
+  <text x="970" y="375" font-family="Arial, sans-serif" font-size="14" fill="#52796F">✏️ 🗑️</text>
+
+  <!-- Table Row 4 -->
+  <text x="320" y="420" font-family="Arial, sans-serif" font-size="14" fill="#2F3E46">4</text>
+  <text x="365" y="420" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Leila</text>
+
+  <text x="490" y="420" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Hosseini</text>
+  <text x="600" y="420" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">09351234567</text>
+  <text x="750" y="420" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#52796F">MD-11023</text>
+  <text x="870" y="420" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Orthopedics</text>
+  <text x="970" y="420" font-family="Arial, sans-serif" font-size="14" fill="#52796F">✏️ 🗑️</text>
+
+  <!-- Table Row 5 -->
+  <text x="320" y="465" font-family="Arial, sans-serif" font-size="14" fill="#2F3E46">5</text>
+  <text x="365" y="465" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Reza</text>
+  <text x="490" y="465" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Maleki</text>
+  <text x="600" y="465" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">09194567890</text>
+  <text x="750" y="465" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#52796F">MD-11156</text>
+  <text x="870" y="465" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Dermatology</text>
+  <text x="970" y="465" font-family="Arial, sans-serif" font-size="14" fill="#52796F">✏️ 🗑️</text>
+
+  <!-- Shadow Filter Definition -->
+  <defs>
+    <filter id="shadow" x="0" y="0" width="1200" height="800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#2F3E46" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+</svg>

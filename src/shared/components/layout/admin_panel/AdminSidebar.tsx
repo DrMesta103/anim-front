@@ -1,6 +1,6 @@
 "use client";
 
-export default function Sidebar() {
+export default function AdminSidebar() {
   const menuItems = [
     { name: "داشبورد", active: true },
     { name: "تخصص ها", active: false },

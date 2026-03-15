@@ -31,9 +31,6 @@ body {
            text-text focus:border-primary focus:outline-none 
            transition-all duration-300 placeholder:text-gray-300;
   }
-}
-
-@layer components {
   .sidebar-item {
     @apply flex items-center gap-4 px-6 py-4 rounded-2xl transition-all duration-300 cursor-pointer font-semibold;
   }

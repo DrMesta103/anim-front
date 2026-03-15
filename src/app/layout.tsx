@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+import { Toaster } from "react-hot-toast";
 
 const modam = localFont({
   src: "../../public/fonts/ModamWeb-Bold.woff2",
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="fa-ir" dir="rtl">
       <body className={`${modam.className}`}>
         <main className="w-full overflow-x-hidden mx-auto min-h-screen flex flex-col">{children}</main>
+        <Toaster position="top-left" />
       </body>
     </html>
   );

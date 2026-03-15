@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import authSlice from "@/features/login/authSlice";
+import loginSlice from "@/features/login/loginSlice";
 
 export const store = configureStore({
   reducer: {
-    auth: authSlice,
+    login: loginSlice,
   },
   devTools: process.env.NODE_ENV !== "production",
 });
