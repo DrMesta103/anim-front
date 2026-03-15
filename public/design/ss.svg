@@ -1,0 +1,50 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#F0F4F2"/>
+
+  <!-- SIDEBAR -->
+  <rect width="260" height="800" fill="white"/>
+  <rect x="259" y="0" width="1" height="800" fill="#CAD2C5"/> <!-- Border -->
+
+  <!-- Logo -->
+  <rect x="30" y="40" width="40" height="40" rx="10" fill="#CAD2C5"/>
+  <path d="M42 52C42 50.8954 42.8954 50 44 50H56C57.1046 50 58 50.8954 58 52V68C58 69.1046 57.1046 70 56 70H44C42.8954 70 42 69.1046 42 68V52Z" stroke="#52796F" stroke-width="2"/>
+  <text x="85" y="68" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2F3E46">SageClinic</text>
+
+  <!-- Sidebar Items -->
+  <!-- Inactive State: Dashboard -->
+  <text x="70" y="162" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#84A98C">Dashboard</text>
+  <circle cx="45" cy="155" r="3" fill="#84A98C"/>
+
+  <!-- Active State: Specialties -->
+  <rect x="20" y="220" width="220" height="50" rx="12" fill="#52796F"/>
+  <text x="70" y="252" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="white">Specialties</text>
+  <circle cx="45" cy="245" r="3" fill="white"/>
+
+  <!-- Other Items -->
+  <text x="70" y="312" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Rooms</text>
+  <text x="70" y="372" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Doctors</text>
+  <text x="70" y="432" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Secretaries</text>
+
+  <!-- TOP BAR -->
+  <text x="290" y="60" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2F3E46">Specialties Management</text>
+  <circle cx="1120" cy="55" r="20" fill="#CAD2C5"/>
+  <text x="1020" y="60" font-family="Arial, sans-serif" font-size="14" fill="#2F3E46" text-anchor="end">Pooya Admin</text>
+
+  <!-- ACTION BAR -->
+  <rect x="290" y="90" width="900" height="50" rx="15" fill="white" filter="url(#shadow)"/>
+  <text x="315" y="120" font-family="Arial, sans-serif" font-size="14" fill="#2F3E46">Search...</text>
+  <rect x="1120" y="98" width="60" height="34" rx="8" fill="#52796F"/>
+  <text x="1145" y="121" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">+ Add</text>
+
+  <!-- MAIN CONTENT AREA -->
+  <!-- Page Title -->
+  <text x="290" y="170" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2F3E46">All Specialties</text>
+
+  <!-- Table Container -->
+  <rect x="290" y="200" width="890" height="350" rx="30" fill="white" filter="url(#shadow)"/>
+
+  <!-- Table Header -->
+  <text x="320" y="235" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#84A98C">ID</text>
+  <text x="380" y="235" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#84A98C">Title</text>
+  </svg>
