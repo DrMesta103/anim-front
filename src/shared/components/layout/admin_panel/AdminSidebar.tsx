@@ -1,13 +1,13 @@
 "use client";
 
+import { setSelectedTab } from "@/features/admin_panel/adminSlice";
+import { adminPanelComponentsMap } from "@/features/admin_panel/constants";
+import { AppDispatch, RootState } from "@/store";
+import { useDispatch, useSelector } from "react-redux";
+
 export default function AdminSidebar() {
-  const menuItems = [
-    { name: "داشبورد", active: true },
-    { name: "تخصص ها", active: false },
-    { name: "اتاق ها", active: false },
-    { name: "دکتر ها", active: false },
-    { name: "منشی ها", active: false },
-  ];
+  const dispatch: AppDispatch = useDispatch();
+  const selectedTab = useSelector((state: RootState) => state.admin.selectedTab);
 
   return (
     <div className="sticky hidden lg:block w-50 xl:w-72 bg-background min-h-screen">
@@ -22,10 +22,14 @@ export default function AdminSidebar() {
         </div>
 
         <nav className="space-y-2 flex-1">
-          {menuItems.map((item) => (
-            <div key={item.name} className={`sidebar-item ${item.active ? "sidebar-item-active" : "sidebar-item-inactive"}`}>
-              <div className={`w-2 h-2 rounded-full ${item.active ? "bg-white" : "bg-transparent border border-secondary"}`} />
-              {item.name}
+          {Object.values(adminPanelComponentsMap).map((item) => (
+            <div
+              key={item.title}
+              onClick={() => dispatch(setSelectedTab(item.name as any))}
+              className={`sidebar-item ${item.name === selectedTab ? "sidebar-item-active" : "sidebar-item-inactive"}`}
+            >
+              <div className={`w-2 h-2 rounded-full ${item.name === selectedTab ? "bg-white" : "bg-transparent border border-secondary"}`} />
+              {item.title}
             </div>
           ))}
         </nav>

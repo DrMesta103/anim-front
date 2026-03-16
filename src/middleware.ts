@@ -23,7 +23,6 @@ export async function middleware(req: NextRequest) {
 
   for (const path in routeConfig) {
     if (path.startsWith(pathname)) {
-      console.log(path, routeConfig[path], role);
       if (!routeConfig[path].requiresAuth) {
         if (role) {
           return NextResponse.redirect(new URL(`/${role}`, req.url));

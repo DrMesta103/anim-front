@@ -1,31 +1,17 @@
-const specialties: Specialty[] = [
-  {
-    id: 1,
-    title: "Cardiology",
-    description: "Heart and vascular health",
-    specialtyCode: "CARD-001",
-  },
-  {
-    id: 2,
-    title: "Neurology",
-    description: "Disorders of the nervous system",
-    specialtyCode: "NEURO-002",
-  },
-  {
-    id: 3,
-    title: "Orthopedics",
-    description: "Musculoskeletal system care",
-    specialtyCode: "ORTHO-003",
-  },
-  {
-    id: 4,
-    title: "Pediatrics",
-    description: "Child health and development",
-    specialtyCode: "PEDI-004",
-  },
-];
+import { AppDispatch, RootState } from "@/store";
+import { Specialty } from "../types";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { fetchAllSpecialtiesthunk } from "../hooks";
+import { formatFaPrice } from "@/shared/lib/formatFaPrice";
 
 export default function Specialties() {
+  const dispatch: AppDispatch = useDispatch();
+  const specialties = useSelector((state: RootState) => state.specialty.specialties);
+
+  useEffect(() => {
+    dispatch(fetchAllSpecialtiesthunk());
+  }, []);
   return (
     <div className="p-6">
       {/* {/ Action Bar /} */}
@@ -53,18 +39,18 @@ export default function Specialties() {
         <table className="w-full">
           <thead>
             <tr className="border-b border-[#F0F4F2]">
-              <th className="text-xs font-bold text-secondary px-8 py-4 text-right">ID</th>
-              <th className="text-xs font-bold text-secondary px-8 py-4 text-right">Title</th>
-              <th className="text-xs font-bold text-secondary px-8 py-4 text-right">Description</th>
-              <th className="text-xs font-bold text-secondary px-8 py-4 text-right">Specialty Code</th>
-              <th className="text-xs font-bold text-secondary px-8 py-4 text-center">Actions</th>
+              <th className="text-xs font-bold text-secondary px-8 py-4 text-right">ردیف</th>
+              <th className="text-xs font-bold text-secondary px-8 py-4 text-right">عنوان</th>
+              <th className="text-xs font-bold text-secondary px-8 py-4 text-right">توضیحات</th>
+              <th className="text-xs font-bold text-secondary px-8 py-4 text-right">کد تخصص</th>
+              <th className="text-xs font-bold text-secondary px-8 py-4 text-center">عملیات</th>
             </tr>
           </thead>
 
           <tbody>
-            {specialties.map((specialty) => (
+            {specialties.map((specialty, index) => (
               <tr key={specialty.id} className="hover:bg-[#F0F4F2]/50 transition-colors">
-                <td className="text-sm text-text px-8 py-5 text-right">{specialty.id}</td>
+                <td className="text-sm text-text px-8 py-5 text-right">{formatFaPrice(index + 1)}</td>
                 <td className="text-sm font-semibold text-text px-8 py-5 truncate text-right">{specialty.title}</td>
                 <td className="text-sm text-secondary px-8 py-5 text-right truncate">{specialty.description}</td>
                 <td className="text-sm font-semibold text-primary px-8 py-5 truncate text-right">{specialty.specialtyCode}</td>

@@ -1,18 +1,21 @@
-import Dashboard from "@/features/admin_panel/components/Dashboard";
-import Rooms from "@/features/rooms/components/Rooms";
-import Specialties from "@/features/specialties/components/Specialties";
+"use client";
+
+import { adminPanelComponentsMap } from "@/features/admin_panel/constants";
 import AdminHeader from "@/shared/components/layout/admin_panel/AdminHeader";
 import AdminSidebar from "@/shared/components/layout/admin_panel/AdminSidebar";
+import { RootState } from "@/store";
+import { useSelector } from "react-redux";
 
 export default function AdminPanel() {
+  const selectedTab = useSelector((state: RootState) => state.admin.selectedTab);
+  const TabComponent = adminPanelComponentsMap[selectedTab].component;
+
   return (
     <div className="min-h-screen bg-background flex">
       <AdminSidebar />
       <main className="flex-1 p-4 md:p-10 overflow-y-auto min-w-0">
         <AdminHeader />
-        <Dashboard />
-        {/* <Specialties /> */}
-        {/* <Rooms /> */}
+        <TabComponent />
       </main>
     </div>
   );
