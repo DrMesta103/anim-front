@@ -3,6 +3,7 @@ import { AdminState } from "./types";
 
 const initialState: AdminState = {
   selectedTab: "dashboard",
+  isNavbarOpen: false,
 };
 
 const adminSlice = createSlice({
@@ -12,8 +13,11 @@ const adminSlice = createSlice({
     setSelectedTab: (state, action: PayloadAction<(typeof state)["selectedTab"]>) => {
       state.selectedTab = action.payload;
     },
+    setNavbarOpen: (state, action: PayloadAction<boolean>) => {
+      state.isNavbarOpen = action.payload;
+    },
   },
 });
 
-export const { setSelectedTab } = adminSlice.actions;
+export const { setSelectedTab, setNavbarOpen } = adminSlice.actions;
 export default adminSlice.reducer;

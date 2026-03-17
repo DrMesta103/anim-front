@@ -3,11 +3,21 @@ import { Specialty, SpecialtyState } from "./types";
 import { fetchAllSpecialtiesthunk } from "./hooks";
 import StatusType from "@/shared/types/status.type";
 import { convertToEnglishDigits } from "@/shared/lib/persianToEnglish";
+import { initialMode } from "@/shared/constants/mode.constant";
+import ModeType from "@/shared/types/mode.type";
+
+const initialData: (typeof initialState)["data"] = {
+  title: "",
+  description: "",
+  specialtyCode: "",
+};
 
 const initialState: SpecialtyState = {
   status: "idle",
   specialties: [],
   search: "",
+  data: initialData,
+  mode: initialMode,
 };
 
 const specialtySlice = createSlice({
@@ -19,6 +29,18 @@ const specialtySlice = createSlice({
     },
     setSearch: (state, action: PayloadAction<string>) => {
       state.search = convertToEnglishDigits(action.payload);
+    },
+    setMode: (state, action: PayloadAction<ModeType>) => {
+      state.mode = action.payload;
+    },
+    setTitle: (state, action: PayloadAction<string>) => {
+      state.data.title = convertToEnglishDigits(action.payload);
+    },
+    setDescription: (state, action: PayloadAction<string>) => {
+      state.data.description = convertToEnglishDigits(action.payload);
+    },
+    setSpecialtyCode: (state, action: PayloadAction<string>) => {
+      state.data.specialtyCode = convertToEnglishDigits(action.payload);
     },
   },
   extraReducers: (builder) =>
@@ -37,5 +59,5 @@ const specialtySlice = createSlice({
       }),
 });
 
-export const { setSearch, setStatus } = specialtySlice.actions;
+export const { setSearch, setStatus, setDescription, setMode, setSpecialtyCode, setTitle } = specialtySlice.actions;
 export default specialtySlice.reducer;

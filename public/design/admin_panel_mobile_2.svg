@@ -1,0 +1,134 @@
+<svg width="375" height="812" viewBox="0 0 375 812" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="375" height="812" fill="#F0F4F2"/>
+
+  <!-- NAVBAR -->
+  <rect x="0" y="0" width="375" height="65" fill="white"/>
+  <rect x="0" y="65" width="375" height="1" fill="#CAD2C5"/>
+
+  <!-- Hamburger Icon -->
+  <g transform="translate(20, 25)">
+    <line x1="10" y1="0" x2="25" y2="0" stroke="#2F3E46" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="10" x2="25" y2="10" stroke="#2F3E46" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="20" x2="25" y2="20" stroke="#2F3E46" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Logo -->
+  <text x="105" y="42" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#52796F">SageClinic</text>
+
+  <!-- Profile Avatar -->
+  <circle cx="345" cy="32" r="18" fill="#CAD2C5"/>
+  <text x="338" y="40" font-family="Arial, sans-serif" font-size="16" fill="#2F3E46">👤</text>
+
+  <!-- TOP BAR -->
+  <text x="20" y="95" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2F3E46">Admin Dashboard</text>
+
+  <!-- Stats Grid (Vertical Stack) -->
+  <!-- Box 1: Doctors -->
+  <rect x="20" y="125" width="335" height="110" rx="15" fill="white" filter="url(#shadow)"/>
+  <text x="40" y="155" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Total Doctors</text>
+  <text x="40" y="185" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#2F3E46">24</text>
+
+  <!-- Box 2: Rooms -->
+  <rect x="20" y="245" width="335" height="110" rx="15" fill="white" filter="url(#shadow)"/>
+  <text x="40" y="275" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Active Rooms</text>
+  <text x="40" y="305" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#2F3E46">12 / 15</text>
+
+  <!-- Box 3: Patients -->
+  <rect x="20" y="365" width="335" height="110" rx="15" fill="white" filter="url(#shadow)"/>
+  <text x="40" y="395" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">Daily Patients</text>
+  <text x="40" y="425" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#2F3E46">148</text>
+
+  <!-- Main Chart Area -->
+  <rect x="20" y="490" width="335" height="200" rx="20" fill="white" filter="url(#shadow)"/>
+  <text x="40" y="520" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2F3E46">Weekly Schedule Traffic</text>
+
+  <!-- Decorative Graph Line (Mobile) -->
+  <path d="M40 670 Q 100 620, 160 640 T 240 590 T 320 610" stroke="#52796F" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M40 670 Q 100 620, 160 640 T 240 590 T 320 610 V 690 H 40 Z" fill="#52796F" opacity="0.1"/>
+
+  <!-- Right Side: Reminders (Now Bottom Section) -->
+  <text x="20" y="710" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2F3E46">Reminders</text>
+
+  <rect x="20" y="730" width="335" height="60" rx="10" fill="white" filter="url(#shadow)"/>
+  <text x="35" y="755" font-family="Arial, sans-serif" font-size="11" fill="#2F3E46">Room 4 Maintenance</text>
+  <text x="35" y="770" font-family="Arial, sans-serif" font-size="10" fill="#84A98C">Starts at 02:00 PM</text>
+
+  <rect x="20" y="755" width="335" height="45" rx="10" fill="white" filter="url(#shadow)"/>
+  <text x="35" y="775" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FF4D4D">Canceled: Dr. Peterson</text>
+  <text x="35" y="788" font-family="Arial, sans-serif" font-size="10" fill="#84A98C">Patient: Sarah Jenkins</text>
+
+
+  <rect x="20" y="785" width="335" height="40" rx="10" fill="white" filter="url(#shadow)"/>
+  <text x="35" y="805" font-family="Arial, sans-serif" font-size="11" fill="#2F3E46">Update Specialties</text>
+  <text x="35" y="818" font-family="Arial, sans-serif" font-size="10" fill="#84A98C">3 doctors pending</text>
+
+  <!-- BOTTOM SECTION: Recent Schedules Table (Compact) -->
+  <rect x="20" y="105" width="335" height="18" fill="#F0F4F2" opacity="0.5"/>
+  <text x="20" y="135" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2F3E46">Recent Active Schedules</text>
+
+  <!-- Table Header (Mobile - Simplified) -->
+  <text x="35" y="155" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#84A98C">Patient</text>
+  <text x="160" y="155" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#84A98C">Doctor</text>
+  <text x="250" y="155" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#84A98C">Time</text>
+  <text x="310" y="155" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#84A98C">Status</text>
+
+  <rect x="35" y="170" width="305" height="1" fill="#F0F4F2"/>
+
+  <!-- Table Row 1 -->
+  <text x="35" y="195" font-family="Arial, sans-serif" font-size="11" fill="#2F3E46">John Doe</text>
+  <text x="160" y="195" font-family="Arial, sans-serif" font-size="11" fill="#2F3E46">Dr. Vance</text>
+  <text x="250" y="195" font-family="Arial, sans-serif" font-size="11" fill="#2F3E46">10:30</text>
+  <rect x="300" y="187" width="45" height="18" rx="10" fill="#52796F" fill-opacity="0.1"/>
+  <text x="310" y="198" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#52796F">In Session</text>
+
+  <!-- Table Row 2 -->
+  <text x="35" y="220" font-family="Arial, sans-serif" font-size="11" fill="#2F3E46">Jane Smith</text>
+  <text x="160" y="220" font-family="Arial, sans-serif" font-size="11" fill="#2F3E46">Dr. Miles</text>
+  <text x="250" y="220" font-family="Arial, sans-serif" font-size="11" fill="#2F3E46">11:45</text>
+  <rect x="300" y="212" width="45" height="18" rx="10" fill="#CAD2C5"/>
+  <text x="310" y="223" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#2F3E46">Waiting</text>
+
+  <text x="35" y="245" font-family="Arial, sans-serif" font-size="11" fill="#2F3E46">Mike Johnson</text>
+  <text x="160" y="245" font-family="Arial, sans-serif" font-size="11" fill="#2F3E46">Dr. Chen</text>
+  <text x="250" y="245" font-family="Arial, sans-serif" font-size="11" fill="#2F3E46">02:00</text>
+  <rect x="300" y="237" width="45" height="18" rx="10" fill="#FF4D4D" fill-opacity="0.1"/>
+  <text x="310" y="248" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#FF4D4D">Cancelled</text>
+
+  <!-- Bottom Navigation Bar (Alternative for Mobile) -->
+  <rect x="0" y="780" width="375" height="50" fill="white"/>
+  <rect x="0" y="780" width="375" height="1" fill="#CAD2C5"/>
+
+  <!-- Home Icon -->
+  <rect x="20" y="785" width="75" height="40" rx="8" fill="white"/>
+  <text x="35" y="810" font-family="Arial, sans-serif" font-size="20" fill="#52796F">🏠</text>
+  <text x="40" y="823" font-family="Arial, sans-serif" font-size="8" fill="#84A98C">Home</text>
+
+  <!-- Doctors Icon -->
+  <rect x="105" y="785" width="75" height="40" rx="8" fill="white"/>
+  <text x="120" y="810" font-family="Arial, sans-serif" font-size="20" fill="#52798C">👨‍⚕️</text>
+  <text x="125" y="823" font-family="Arial, sans-serif" font-size="8" fill="#84A98C">Docs</text>
+
+  <!-- Patients Icon -->
+  <rect x="190" y="785" width="75" height="40" rx="8" fill="white"/>
+  <text x="205" y="810" font-family="Arial, sans-serif" font-size="20" fill="#52798C">👥</text>
+  <text x="210" y="823" font-family="Arial, sans-serif" font-size="8" fill="#84A98C">Patients</text>
+
+  <!-- Schedule Icon -->
+  <rect x="275" y="785" width="75" height="40" rx="8" fill="white"/>
+  <text x="290" y="810" font-family="Arial, sans-serif" font-size="20" fill="#52798C">📅</text>
+
+  <text x="295" y="823" font-family="Arial, sans-serif" font-size="8" fill="#84A98C">Schedule</text>
+
+  <!-- Settings Icon -->
+  <rect x="335" y="785" width="40" height="40" rx="8" fill="white"/>
+  <text x="345" y="810" font-family="Arial, sans-serif" font-size="20" fill="#52798C">⚙️</text>
+  <text x="350" y="823" font-family="Arial, sans-serif" font-size="8" fill="#84A98C">Menu</text>
+
+  <!-- Shadow Filter Definition -->
+  <defs>
+    <filter id="shadow" x="-20" y="-20" width="415" height="450" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="5" stdDeviation="10" flood-color="#2F3E46" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+</svg>

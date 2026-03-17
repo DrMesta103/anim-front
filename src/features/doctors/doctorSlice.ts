@@ -1,13 +1,27 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Doctor, DoctorState } from "./types";
-import { fetchAllDoctorsthunk } from "./hooks";
+import { Doctor, DoctorDataType, DoctorState } from "./types";
+import { fetchAllDoctorsthunk, addDoctorThunk, updateDoctorThunk, deleteDoctorThunk } from "./hooks";
 import StatusType from "@/shared/types/status.type";
 import { convertToEnglishDigits } from "@/shared/lib/persianToEnglish";
+import { initialMode } from "@/shared/constants/mode.constant";
+import ModeType from "@/shared/types/mode.type";
+
+const initialData: DoctorDataType = {
+  firstname: "",
+  lastname: "",
+  medicalCode: "",
+  password: "",
+  phone: "",
+  username: "",
+  specialtyId: "",
+};
 
 const initialState: DoctorState = {
   status: "idle",
   doctors: [],
   search: "",
+  mode: initialMode,
+  data: initialData,
 };
 
 const doctorSlice = createSlice({
@@ -19,6 +33,16 @@ const doctorSlice = createSlice({
     },
     setSearch: (state, action: PayloadAction<string>) => {
       state.search = convertToEnglishDigits(action.payload);
+    },
+    setMode: (state, action: PayloadAction<ModeType>) => {
+      state.mode = action.payload;
+    },
+    setData: (state, action: PayloadAction<Partial<DoctorDataType>>) => {
+      state.data = { ...state.data, ...action.payload };
+    },
+    resetDoctorForm: (state) => {
+      state.mode = initialMode;
+      state.data = initialData;
     },
   },
   extraReducers: (builder) =>
@@ -34,8 +58,20 @@ const doctorSlice = createSlice({
       })
       .addCase(fetchAllDoctorsthunk.rejected, (state) => {
         state.status = "error";
+      })
+      .addCase(addDoctorThunk.fulfilled, (state) => {
+        state.mode = initialMode;
+        state.data = initialData;
+      })
+      .addCase(updateDoctorThunk.fulfilled, (state) => {
+        state.mode = initialMode;
+        state.data = initialData;
+      })
+      .addCase(deleteDoctorThunk.fulfilled, (state) => {
+        state.mode = initialMode;
+        state.data = initialData;
       }),
 });
 
-export const { setSearch, setStatus } = doctorSlice.actions;
+export const { setSearch, setStatus, setMode, setData, resetDoctorForm } = doctorSlice.actions;
 export default doctorSlice.reducer;

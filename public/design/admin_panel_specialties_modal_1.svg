@@ -1,0 +1,70 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- DEF: Drop Shadow for the Modal -->
+  <defs>
+    <filter id="modal-shadow" x="150" y="30" width="500" height="600" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="15" stdDeviation="20" flood-color="#2F3E46" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background Layer (The app underneath, slightly blurred/darkened) -->
+  <rect width="800" height="600" fill="#F0F4F2"/>
+  
+  <!-- Mock Table background behind modal to show context -->
+  <rect x="50" y="50" width="700" height="500" rx="20" fill="white" opacity="0.5"/>
+  <rect x="50" y="50" width="700" height="50" fill="#CAD2C5" opacity="0.2" rx="20"/>
+
+  <!-- Dark Overlay -->
+  <rect width="800" height="600" fill="#2F3E46" opacity="0.4"/>
+
+  <!-- MODAL CONTAINER -->
+  <rect x="200" y="80" width="400" height="460" rx="24" fill="white" filter="url(#modal-shadow)"/>
+
+  <!-- Modal Header -->
+  <text x="560" y="125" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2F3E46" text-anchor="end">افزودن / ویرایش تخصص</text>
+  
+  <!-- Close Button (X icon) -->
+  <rect x="220" y="105" width="30" height="30" rx="8" fill="#F0F4F2" class="hover-bg"/>
+  <path d="M230 115 L240 125 M240 115 L230 125" stroke="#84A98C" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Header Divider -->
+  <line x1="200" y1="150" x2="600" y2="150" stroke="#F0F4F2" stroke-width="2"/>
+
+  <!-- INPUT FIELDS -->
+
+  <!-- 1. Title Input -->
+  <text x="560" y="185" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C" text-anchor="end">عنوان تخصص</text>
+  <!-- Input Box -->
+  <rect x="240" y="195" width="320" height="44" rx="12" fill="white" stroke="#CAD2C5" stroke-width="1"/>
+  <!-- Filled Value -->
+  <text x="545" y="222" font-family="Arial, sans-serif" font-size="14" fill="#2F3E46" text-anchor="end">قلب و عروق</text>
+
+  <!-- 2. Specialty Code Input -->
+  <text x="560" y="270" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C" text-anchor="end">کد تخصص</text>
+  <!-- Input Box (Focused state representation) -->
+  <rect x="240" y="280" width="320" height="44" rx="12" fill="white" stroke="#52796F" stroke-width="2"/>
+  <!-- Filled Value -->
+  <text x="545" y="307" font-family="Arial, sans-serif" font-size="14" fill="#2F3E46" text-anchor="end">CARD-102</text>
+  <!-- Cursor line -->
+  <line x1="475" y1="292" x2="475" y2="312" stroke="#52796F" stroke-width="1.5"/>
+
+  <!-- 3. Description Textarea -->
+  <text x="560" y="355" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C" text-anchor="end">توضیحات</text>
+  <!-- Textarea Box -->
+  <rect x="240" y="365" width="320" height="80" rx="12" fill="white" stroke="#CAD2C5" stroke-width="1"/>
+  <!-- Filled Value (Multiline simulation) -->
+  <text x="545" y="390" font-family="Arial, sans-serif" font-size="13" fill="#2F3E46" text-anchor="end">متخصص در تشخیص و درمان بیماری‌های</text>
+  <text x="545" y="415" font-family="Arial, sans-serif" font-size="13" fill="#2F3E46" text-anchor="end">مرتبط با قلب و عروق خونی.</text>
+
+
+  <!-- FOOTER & BUTTONS -->
+  <line x1="200" y1="465" x2="600" y2="465" stroke="#F0F4F2" stroke-width="2"/>
+
+  <!-- Submit / Save Button -->
+  <rect x="240" y="480" width="140" height="44" rx="8" fill="#52796F"/>
+  <text x="310" y="507" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">ثبت اطلاعات</text>
+
+  <!-- Cancel Button -->
+  <rect x="395" y="480" width="100" height="44" rx="8" fill="#F0F4F2"/>
+  <text x="445" y="507" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46" text-anchor="middle">انصراف</text>
+
+</svg>

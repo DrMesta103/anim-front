@@ -4,8 +4,11 @@ import { AppDispatch, RootState } from "@/store";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { formatFaPrice } from "@/shared/lib/formatFaPrice";
-import { setSearch } from "../secretarySlice";
+import { setSearch, setMode, setData } from "../secretarySlice";
 import { fetchAllSecretariesthunk } from "../hooks";
+import SecretariesModal from "./SecretariesModal";
+import SecretariesDeleteAlert from "./SecretariesDeleteAlert";
+import { Secretary } from "../types";
 
 export default function Secretaries() {
   const dispatch: AppDispatch = useDispatch();
@@ -14,10 +17,34 @@ export default function Secretaries() {
 
   useEffect(() => {
     dispatch(fetchAllSecretariesthunk());
-  }, []);
+  }, [dispatch]);
+
+  const handleOpenAdd = () => {
+    dispatch(setMode({ method: "CREATE", id: "", title: "" }));
+  };
+
+  const handleOpenEdit = (secretary: Secretary) => {
+    dispatch(
+      setData({
+        username: secretary.username,
+        phone: secretary.phone,
+        firstname: secretary.firstname,
+        lastname: secretary.lastname,
+        password: "", // Leave empty for editing unless changing
+      }),
+    );
+    dispatch(setMode({ method: "UPDATE", id: secretary.id, title: `${secretary.firstname} ${secretary.lastname}` }));
+  };
+
+  const handleOpenDelete = (secretary: Secretary) => {
+    dispatch(setMode({ method: "DELETE", id: secretary.id, title: `${secretary.firstname} ${secretary.lastname}` }));
+  };
 
   return (
     <div className="p-6">
+      <SecretariesModal />
+      <SecretariesDeleteAlert />
+
       <div className="flex items-center gap-4 mb-8">
         <input
           value={search}
@@ -25,7 +52,10 @@ export default function Secretaries() {
           placeholder="جستجو..."
           className="w-full max-w-[400px] px-6 py-3 rounded-[15px] border border-accent bg-white shadow-sm text-text placeholder:text-gray-300 focus:border-primary focus:outline-none transition-all duration-200 text-sm"
         />
-        <button className="flex justify-center truncate items-center px-6 py-3 bg-primary text-white rounded-[8px] text-sm font-bold hover:bg-primary/90 transition-colors shadow-sm">
+        <button
+          onClick={handleOpenAdd}
+          className="flex justify-center truncate items-center px-6 py-3 bg-primary text-white rounded-[8px] text-sm font-bold hover:bg-primary/90 transition-colors shadow-sm"
+        >
           افزودن +
         </button>
       </div>
@@ -58,10 +88,18 @@ export default function Secretaries() {
                   <td className="text-sm text-secondary px-8 py-5 text-right truncate">{secretary.phone}</td>
                   <td className="px-8 py-5 text-center">
                     <div className="flex items-center justify-center gap-3">
-                      <button className="text-primary hover:text-text transition-colors p-1.5 rounded-lg hover:bg-accent/20" title="Edit">
+                      <button
+                        onClick={() => handleOpenEdit(secretary)}
+                        className="text-primary hover:text-text transition-colors p-1.5 rounded-lg hover:bg-accent/20"
+                        title="Edit"
+                      >
                         ✏️
                       </button>
-                      <button className="text-primary hover:text-error transition-colors p-1.5 rounded-lg hover:bg-error/10" title="Delete">
+                      <button
+                        onClick={() => handleOpenDelete(secretary)}
+                        className="text-primary hover:text-error transition-colors p-1.5 rounded-lg hover:bg-error/10"
+                        title="Delete"
+                      >
                         🗑️
                       </button>
                     </div>

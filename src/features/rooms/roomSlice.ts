@@ -3,11 +3,22 @@ import { Room, RoomState } from "./types";
 import { fetchAllRoomsthunk } from "./hooks";
 import StatusType from "@/shared/types/status.type";
 import { convertToEnglishDigits } from "@/shared/lib/persianToEnglish";
+import { initialMode } from "@/shared/constants/mode.constant";
+import ModeType from "@/shared/types/mode.type";
+
+const initialData: (typeof initialState)["data"] = {
+  name: "",
+  description: "",
+  floor: "",
+  isActive: true,
+};
 
 const initialState: RoomState = {
   status: "idle",
   rooms: [],
   search: "",
+  data: initialData,
+  mode: initialMode,
 };
 
 const roomSlice = createSlice({
@@ -19,6 +30,24 @@ const roomSlice = createSlice({
     },
     setSearch: (state, action: PayloadAction<string>) => {
       state.search = convertToEnglishDigits(action.payload);
+    },
+    setMode: (state, action: PayloadAction<ModeType>) => {
+      state.mode = action.payload;
+    },
+    setName: (state, action: PayloadAction<string>) => {
+      state.data.name = convertToEnglishDigits(action.payload);
+    },
+    setDescription: (state, action: PayloadAction<string>) => {
+      state.data.description = convertToEnglishDigits(action.payload);
+    },
+    setFloor: (state, action: PayloadAction<number | "">) => {
+      state.data.floor = action.payload;
+    },
+    setIsActive: (state, action: PayloadAction<boolean>) => {
+      state.data.isActive = action.payload;
+    },
+    resetForm: (state) => {
+      state.data = initialData;
     },
   },
   extraReducers: (builder) =>
@@ -37,5 +66,5 @@ const roomSlice = createSlice({
       }),
 });
 
-export const { setSearch, setStatus } = roomSlice.actions;
+export const { setSearch, setStatus, setMode, setName, setDescription, setFloor, setIsActive, resetForm } = roomSlice.actions;
 export default roomSlice.reducer;

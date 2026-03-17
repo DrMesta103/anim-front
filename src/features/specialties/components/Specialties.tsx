@@ -1,10 +1,13 @@
 import { AppDispatch, RootState } from "@/store";
 import { Specialty } from "../types";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { fetchAllSpecialtiesthunk } from "../hooks";
 import { formatFaPrice } from "@/shared/lib/formatFaPrice";
-import { setSearch } from "../specialtySlice";
+import { setDescription, setMode, setSearch, setSpecialtyCode, setTitle } from "../specialtySlice";
+import SpecialtyModal from "./SpecialtiesModal";
+import DeleteAlert from "./SpecialtiesDeleteAlert";
+import { initialMode } from "@/shared/constants/mode.constant";
 
 export default function Specialties() {
   const dispatch: AppDispatch = useDispatch();
@@ -14,8 +17,26 @@ export default function Specialties() {
   useEffect(() => {
     dispatch(fetchAllSpecialtiesthunk());
   }, []);
+
+  const handleOpenAdd = () => {
+    dispatch(setMode({ ...initialMode, method: "CREATE" }));
+  };
+
+  const handleOpenEdit = (specialty: Specialty) => {
+    dispatch(setMode({ id: specialty.id, method: "UPDATE", title: specialty.title }));
+    dispatch(setTitle(specialty.title));
+    dispatch(setDescription(specialty.description));
+    dispatch(setSpecialtyCode(specialty.specialtyCode));
+  };
+
+  const handleDeleteAlertOpen = (specialty: Specialty) => {
+    dispatch(setMode({ id: specialty.id, method: "DELETE", title: specialty.title }));
+  };
+
   return (
     <div className="p-6">
+      <DeleteAlert />
+      <SpecialtyModal />
       <div className="flex items-center gap-4 mb-8">
         <input
           value={search}
@@ -26,6 +47,7 @@ export default function Specialties() {
                      transition-all duration-200 text-sm"
         />
         <button
+          onClick={handleOpenAdd}
           className="flex justify-center items-center  truncate px-6 py-3 bg-primary text-white rounded-[8px] text-sm font-bold 
                            hover:bg-primary/90 transition-colors shadow-sm"
         >
@@ -58,10 +80,18 @@ export default function Specialties() {
                   <td className="text-sm font-semibold text-primary px-8 py-5 truncate text-right">{specialty.specialtyCode}</td>
                   <td className="px-8 py-5 text-center">
                     <div className="flex items-center justify-center gap-3">
-                      <button className="text-primary hover:text-text transition-colors p-1.5 rounded-lg hover:bg-accent/20" title="Edit">
+                      <button
+                        onClick={() => handleOpenEdit(specialty)}
+                        className="text-primary hover:text-text transition-colors p-1.5 rounded-lg hover:bg-accent/20"
+                        title="Edit"
+                      >
                         ✏️
                       </button>
-                      <button className="text-primary hover:text-error transition-colors p-1.5 rounded-lg hover:bg-error/10" title="Delete">
+                      <button
+                        onClick={() => handleDeleteAlertOpen(specialty)}
+                        className="text-primary hover:text-error transition-colors p-1.5 rounded-lg hover:bg-error/10"
+                        title="Delete"
+                      >
                         🗑️
                       </button>
                     </div>
@@ -72,7 +102,6 @@ export default function Specialties() {
         </table>
       </div>
 
-      {/* {/* Empty State (if needed) /} */}
       {specialties.length === 0 && (
         <div className="text-center py-12 text-secondary">
           <p>تخصصی پیدا نشد.</p>

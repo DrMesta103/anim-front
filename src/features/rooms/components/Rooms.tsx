@@ -3,8 +3,11 @@ import { Room } from "../types";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchAllRoomsthunk } from "../hooks";
-import { setSearch } from "../roomSlice";
+import { setSearch, setMode, setName, setDescription, setFloor, setIsActive, resetForm } from "../roomSlice";
 import { formatFaPrice } from "@/shared/lib/formatFaPrice";
+import { initialMode } from "@/shared/constants/mode.constant";
+import RoomsModal from "./RoomsModal";
+import RoomsDeleteAlert from "./RoomsDeleteAlert";
 
 export default function Rooms() {
   const dispatch: AppDispatch = useDispatch();
@@ -14,8 +17,28 @@ export default function Rooms() {
     dispatch(fetchAllRoomsthunk());
   }, []);
 
+  const handleOpenAdd = () => {
+    dispatch(resetForm());
+    dispatch(setMode({ ...initialMode, method: "CREATE" }));
+  };
+
+  const handleOpenEdit = (room: Room) => {
+    dispatch(setMode({ id: room.id.toString(), method: "UPDATE", title: room.name }));
+    dispatch(setName(room.name));
+    dispatch(setDescription(room.description));
+    dispatch(setFloor(room.floor));
+    dispatch(setIsActive(room.isActive));
+  };
+
+  const handleDeleteAlertOpen = (room: Room) => {
+    dispatch(setMode({ id: room.id.toString(), method: "DELETE", title: room.name }));
+  };
+
   return (
     <div className="p-6">
+      <RoomsDeleteAlert />
+      <RoomsModal />
+
       <div className="flex items-center gap-4 mb-8">
         <input
           value={search}
@@ -23,7 +46,10 @@ export default function Rooms() {
           placeholder="جستجو..."
           className="w-full max-w-[400px] px-6 py-3 rounded-[15px] border border-accent bg-white shadow-sm text-text placeholder:text-gray-300 focus:border-primary focus:outline-none transition-all duration-200 text-sm"
         />
-        <button className="flex justify-center truncate items-center px-6 py-3 bg-primary text-white rounded-[8px] text-sm font-bold hover:bg-primary/90 transition-colors shadow-sm">
+        <button
+          onClick={handleOpenAdd}
+          className="flex justify-center truncate items-center px-6 py-3 bg-primary text-white rounded-[8px] text-sm font-bold hover:bg-primary/90 transition-colors shadow-sm"
+        >
           افزودن +
         </button>
       </div>
@@ -70,10 +96,18 @@ export default function Rooms() {
                   </td>
                   <td className="px-8 py-5 text-center">
                     <div className="flex items-center justify-center gap-3">
-                      <button className="text-primary hover:text-text transition-colors p-1.5 rounded-lg hover:bg-accent/20" title="Edit">
+                      <button
+                        onClick={() => handleOpenEdit(room)}
+                        className="text-primary hover:text-text transition-colors p-1.5 rounded-lg hover:bg-accent/20"
+                        title="Edit"
+                      >
                         ✏️
                       </button>
-                      <button className="text-primary hover:text-error transition-colors p-1.5 rounded-lg hover:bg-error/10" title="Delete">
+                      <button
+                        onClick={() => handleDeleteAlertOpen(room)}
+                        className="text-primary hover:text-error transition-colors p-1.5 rounded-lg hover:bg-error/10"
+                        title="Delete"
+                      >
                         🗑️
                       </button>
                     </div>

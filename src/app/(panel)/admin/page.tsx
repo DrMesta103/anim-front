@@ -2,6 +2,7 @@
 
 import { adminPanelComponentsMap } from "@/features/admin_panel/constants";
 import AdminHeader from "@/shared/components/layout/admin_panel/AdminHeader";
+import AdminNavbar from "@/shared/components/layout/admin_panel/AdminNavbar";
 import AdminSidebar from "@/shared/components/layout/admin_panel/AdminSidebar";
 import { RootState } from "@/store";
 import { useSelector } from "react-redux";
@@ -13,7 +14,8 @@ export default function AdminPanel() {
   return (
     <div className="min-h-screen bg-background flex">
       <AdminSidebar />
-      <main className="flex-1 p-4 md:p-10 overflow-y-auto min-w-0">
+      <AdminNavbar />
+      <main className="flex-1 p-4 mt-[65px] lg:mt-0 md:p-10 overflow-y-auto min-w-0">
         <AdminHeader />
         <TabComponent />
       </main>
