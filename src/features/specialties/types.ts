@@ -10,4 +10,5 @@ export interface Specialty {
 export interface SpecialtyState {
   status: StatusType;
   specialties: Specialty[];
+  search: string;
 }

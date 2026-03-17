@@ -10,8 +10,8 @@ export default function AdminSidebar() {
   const selectedTab = useSelector((state: RootState) => state.admin.selectedTab);
 
   return (
-    <div className="sticky hidden lg:block w-50 xl:w-72 bg-background min-h-screen">
-      <aside className="w-50 xl:w-72 bg-white border-r border-accent flex flex-col p-6 fixed top-0 min-h-screen">
+    <div className="sticky hidden lg:block w-56 xl:w-72 bg-background min-h-screen">
+      <aside className="w-56 xl:w-72 bg-white border-r border-accent flex flex-col p-6 fixed top-0 min-h-screen">
         <div className="flex items-center gap-3 mb-12 px-2">
           <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white shadow-md">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
