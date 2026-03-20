@@ -2,7 +2,8 @@
 
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/store";
-import { setName, setDescription, setFloor, setIsActive, setMode, resetForm } from "../roomSlice";
+import { setName, setDescription, setFloor, setIsActive, setMode, refreshData } from "../roomSlice";
+import { useSubmitRoom } from "../hooks";
 
 export default function RoomsModal() {
   const dispatch: AppDispatch = useDispatch();
@@ -11,12 +12,15 @@ export default function RoomsModal() {
     data: { name, description, floor, isActive },
   } = useSelector((state: RootState) => state.room);
 
-  if (mode.method !== "CREATE" && mode.method !== "UPDATE") return null;
+  const createRoom = useSubmitRoom("CREATE");
+  const updateRoom = useSubmitRoom("UPDATE");
 
   const handleClose = () => {
     dispatch(setMode({ id: "", method: "READ", title: "" }));
-    dispatch(resetForm());
+    dispatch(refreshData());
   };
+
+  if (mode.method !== "CREATE" && mode.method !== "UPDATE") return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#2F3E46]/40 backdrop-blur-sm transition-opacity">
@@ -38,7 +42,7 @@ export default function RoomsModal() {
         </div>
 
         {/* Form Body */}
-        <form className="flex flex-col p-6 gap-5">
+        <form className="flex flex-col p-6 gap-5" onSubmit={mode.method === "CREATE" ? createRoom : updateRoom}>
           {/* Name Input */}
           <div className="flex flex-col gap-2">
             <label className="text-sm font-bold text-secondary">نام اتاق</label>

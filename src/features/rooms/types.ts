@@ -2,7 +2,7 @@ import ModeType from "@/shared/types/mode.type";
 import StatusType from "@/shared/types/status.type";
 
 export interface Room {
-  id: number;
+  id: string;
   name: string;
   description: string;
   floor: number;

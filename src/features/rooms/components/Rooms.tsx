@@ -2,8 +2,8 @@ import { AppDispatch, RootState } from "@/store";
 import { Room } from "../types";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchAllRoomsthunk } from "../hooks";
-import { setSearch, setMode, setName, setDescription, setFloor, setIsActive, resetForm } from "../roomSlice";
+import { fetchAllRoomsThunk } from "../hooks";
+import { setSearch, setMode, setName, setDescription, setFloor, setIsActive, refreshData, refreshState } from "../roomSlice";
 import { formatFaPrice } from "@/shared/lib/formatFaPrice";
 import { initialMode } from "@/shared/constants/mode.constant";
 import RoomsModal from "./RoomsModal";
@@ -14,15 +14,20 @@ export default function Rooms() {
   const { rooms, search } = useSelector((state: RootState) => state.room);
 
   useEffect(() => {
-    dispatch(fetchAllRoomsthunk());
+    dispatch(fetchAllRoomsThunk());
+
+    return () => {
+      dispatch(refreshState());
+    };
   }, []);
 
   const handleOpenAdd = () => {
-    dispatch(resetForm());
+    dispatch(refreshData());
     dispatch(setMode({ ...initialMode, method: "CREATE" }));
   };
 
   const handleOpenEdit = (room: Room) => {
+    dispatch(refreshData());
     dispatch(setMode({ id: room.id.toString(), method: "UPDATE", title: room.name }));
     dispatch(setName(room.name));
     dispatch(setDescription(room.description));

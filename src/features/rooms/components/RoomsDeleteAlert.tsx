@@ -3,10 +3,12 @@
 import { AppDispatch, RootState } from "@/store";
 import { useDispatch, useSelector } from "react-redux";
 import { setMode } from "../roomSlice";
+import { useSubmitRoom } from "../hooks";
 
 export default function RoomsDeleteAlert() {
   const dispatch: AppDispatch = useDispatch();
   const mode = useSelector((state: RootState) => state.room.mode);
+  const deleteRoom = useSubmitRoom("DELETE");
 
   if (mode.method !== "DELETE") return null;
 
@@ -41,10 +43,7 @@ export default function RoomsDeleteAlert() {
             انصراف
           </button>
           <button
-            onClick={() => {
-              // Dispatch delete thunk here
-              dispatch(setMode({ id: "", method: "READ", title: "" }));
-            }}
+            onClick={deleteRoom}
             className="flex-1 py-3 rounded-[12px] bg-red-500 text-white font-bold text-sm 
                        hover:bg-red-600 transition-colors shadow-md shadow-red-500/20"
           >
