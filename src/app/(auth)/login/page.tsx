@@ -15,8 +15,8 @@ export default function LoginPage() {
         </ReduxProvider>
         <div className="mt-10 text-center">
           <p className="text-xs text-secondary leading-relaxed">
-            حساب کاربری ندارید یا دسترسی خود را گم کرده‌اید؟ <br />
-            <span className="text-primary font-bold cursor-pointer hover:underline">با مدیر سیستم تماس بگیرید</span>
+            توسعه و پیاده سازی توسط: <br />
+            <span className="text-primary font-bold cursor-pointer hover:underline">پویا دفاعی</span>
           </p>
         </div>
       </div>

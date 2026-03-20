@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Specialty, SpecialtyState } from "./types";
-import { fetchAllSpecialtiesthunk } from "./hooks";
+import { fetchAllSpecialtiesthunk, createSpecialtyThunk, updateSpecialtyThunk, deleteSpecialtyThunk } from "./hooks";
 import StatusType from "@/shared/types/status.type";
 import { convertToEnglishDigits } from "@/shared/lib/persianToEnglish";
 import { initialMode } from "@/shared/constants/mode.constant";
@@ -42,6 +42,16 @@ const specialtySlice = createSlice({
     setSpecialtyCode: (state, action: PayloadAction<string>) => {
       state.data.specialtyCode = convertToEnglishDigits(action.payload);
     },
+    refreshData: (state) => {
+      state.data = initialData;
+    },
+    refreshState: (state) => {
+      state.data = initialData;
+      state.mode = initialMode;
+      state.specialties = [];
+      state.status = "idle";
+      state.search = "";
+    },
   },
   extraReducers: (builder) =>
     builder
@@ -56,8 +66,53 @@ const specialtySlice = createSlice({
       })
       .addCase(fetchAllSpecialtiesthunk.rejected, (state) => {
         state.status = "error";
+      })
+
+      .addCase(createSpecialtyThunk.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(createSpecialtyThunk.fulfilled, (state, action: PayloadAction<Specialty>) => {
+        state.status = "success";
+        if (action.payload) {
+          state.specialties = [...state.specialties, action.payload];
+          state.data = initialData;
+          state.mode = initialMode;
+        }
+      })
+      .addCase(createSpecialtyThunk.rejected, (state) => {
+        state.status = "error";
+      })
+
+      .addCase(updateSpecialtyThunk.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(updateSpecialtyThunk.fulfilled, (state, action: PayloadAction<Specialty>) => {
+        state.status = "success";
+        if (action.payload) {
+          state.specialties = state.specialties.map((specialty) => (specialty.id === action.payload.id ? action.payload : specialty));
+          state.data = initialData;
+          state.mode = initialMode;
+        }
+      })
+      .addCase(updateSpecialtyThunk.rejected, (state) => {
+        state.status = "error";
+      })
+
+      .addCase(deleteSpecialtyThunk.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(deleteSpecialtyThunk.fulfilled, (state, action: PayloadAction<string>) => {
+        state.status = "success";
+        if (action.payload) {
+          state.specialties = state.specialties.filter((specialty) => specialty.id !== action.payload);
+          state.data = initialData;
+          state.mode = initialMode;
+        }
+      })
+      .addCase(deleteSpecialtyThunk.rejected, (state) => {
+        state.status = "error";
       }),
 });
 
-export const { setSearch, setStatus, setDescription, setMode, setSpecialtyCode, setTitle } = specialtySlice.actions;
+export const { setSearch, setStatus, setDescription, setMode, setSpecialtyCode, setTitle, refreshData, refreshState } = specialtySlice.actions;
 export default specialtySlice.reducer;

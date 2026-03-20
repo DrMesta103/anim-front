@@ -3,6 +3,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/store";
 import { setDescription, setMode, setSpecialtyCode, setTitle } from "../specialtySlice";
+import { useSubmitSpecialty } from "../hooks";
 
 export default function SpecialtyModal() {
   const dispatch: AppDispatch = useDispatch();
@@ -10,6 +11,9 @@ export default function SpecialtyModal() {
     mode,
     data: { description, specialtyCode, title },
   } = useSelector((state: RootState) => state.specialty);
+
+  const createSpecialty = useSubmitSpecialty("CREATE");
+  const updateSpecialty = useSubmitSpecialty("UPDATE");
 
   if (mode.method !== "CREATE" && mode.method !== "UPDATE") return null;
 
@@ -33,7 +37,7 @@ export default function SpecialtyModal() {
         </div>
 
         {/* Form Body */}
-        <form className="flex flex-col p-6 gap-5">
+        <form className="flex flex-col p-6 gap-5" onSubmit={mode.method === "CREATE" ? createSpecialty : updateSpecialty}>
           {/* Title Input */}
           <div className="flex flex-col gap-2">
             <label className="text-sm font-bold text-secondary">عنوان تخصص</label>

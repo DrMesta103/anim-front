@@ -3,10 +3,12 @@
 import { AppDispatch, RootState } from "@/store";
 import { useDispatch, useSelector } from "react-redux";
 import { setMode } from "../specialtySlice";
+import { useSubmitSpecialty } from "../hooks";
 
 export default function DeleteAlert() {
   const dispatch: AppDispatch = useDispatch();
   const mode = useSelector((state: RootState) => state.specialty.mode);
+  const deleteSpecialty = useSubmitSpecialty("DELETE");
 
   if (mode.method !== "DELETE") return null;
 
@@ -41,7 +43,7 @@ export default function DeleteAlert() {
             انصراف
           </button>
           <button
-            onClick={() => dispatch(setMode({ id: "", method: "READ", title: "" }))}
+            onClick={deleteSpecialty}
             className="flex-1 py-3 rounded-[12px] bg-red-500 text-white font-bold text-sm 
                        hover:bg-red-600 transition-colors shadow-md shadow-red-500/20"
           >

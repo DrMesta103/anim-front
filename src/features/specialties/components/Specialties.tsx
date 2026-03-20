@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { fetchAllSpecialtiesthunk } from "../hooks";
 import { formatFaPrice } from "@/shared/lib/formatFaPrice";
-import { setDescription, setMode, setSearch, setSpecialtyCode, setTitle } from "../specialtySlice";
+import { refreshData, refreshState, setDescription, setMode, setSearch, setSpecialtyCode, setTitle } from "../specialtySlice";
 import SpecialtyModal from "./SpecialtiesModal";
 import DeleteAlert from "./SpecialtiesDeleteAlert";
 import { initialMode } from "@/shared/constants/mode.constant";
@@ -16,13 +16,19 @@ export default function Specialties() {
 
   useEffect(() => {
     dispatch(fetchAllSpecialtiesthunk());
+
+    return () => {
+      dispatch(refreshState());
+    };
   }, []);
 
   const handleOpenAdd = () => {
     dispatch(setMode({ ...initialMode, method: "CREATE" }));
+    dispatch(refreshData());
   };
 
   const handleOpenEdit = (specialty: Specialty) => {
+    dispatch(refreshData());
     dispatch(setMode({ id: specialty.id, method: "UPDATE", title: specialty.title }));
     dispatch(setTitle(specialty.title));
     dispatch(setDescription(specialty.description));
