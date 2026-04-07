@@ -1,0 +1,92 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Rich, deep slate gradient for the Robin's body -->
+    <linearGradient id="bodyGrad" x1="100" y1="60" x2="50" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2F3E46"/>
+      <stop offset="100%" stop-color="#1A2429"/>
+    </linearGradient>
+
+    <!-- Vibrant signature Red gradient for the Robin's breast -->
+    <linearGradient id="breastGrad" x1="150" y1="100" x2="130" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E57373"/>
+      <stop offset="100%" stop-color="#C64747"/>
+    </linearGradient>
+
+    <!-- Healing Sage Green gradient for the sweeping wing -->
+    <linearGradient id="wingGrad" x1="120" y1="100" x2="60" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#84A98C"/>
+      <stop offset="100%" stop-color="#52796F"/>
+    </linearGradient>
+
+    <!-- Soft glow effect for the medical cross and bubbles -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="softShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#2F3E46" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Base App Icon / Favicon Plate (Soft, pristine background) -->
+  <circle cx="128" cy="128" r="120" fill="#F4F8F7" filter="url(#softShadow)"/>
+
+  <!-- Background "Vibe" - Soothing, floating healing energy bubbles -->
+  <g opacity="0.6">
+    <circle cx="80" cy="70" r="35" fill="#CAD2C5" opacity="0.3" filter="url(#glow)"/>
+    <circle cx="190" cy="65" r="12" fill="#84A98C" opacity="0.4"/>
+    <circle cx="215" cy="95" r="5" fill="#D65A5A" opacity="0.5"/>
+    <circle cx="60" cy="180" r="18" fill="#52796F" opacity="0.15"/>
+    <circle cx="180" cy="200" r="20" fill="#E8F4F1" opacity="0.8"/>
+    <circle cx="210" cy="185" r="8" fill="#84A98C" opacity="0.3"/>
+    <circle cx="45" cy="115" r="6" fill="#2F3E46" opacity="0.1"/>
+  </g>
+
+  <!-- Center Artwork Group (Shifted slightly for perfect optical balance) -->
+  <g transform="translate(18, 0)">
+    
+    <!-- 1. Main Robin Silhouette (Head, Back, Long sweeping tail) -->
+    <path d="M 195 90 
+             L 180 100 
+             C 185 160, 125 200, 95 160 
+             C 75 180, 45 195, 10 190 
+             C 25 160, 65 120, 100 85 
+             C 125 60, 170 60, 180 85 
+             L 195 90 Z" 
+          fill="url(#bodyGrad)"/>
+
+    <!-- 2. The Iconic Red Breast (Overlaps the body to create the Robin's chest) -->
+    <path d="M 180 100 
+             C 185 160, 125 200, 95 160 
+             C 120 130, 150 110, 180 100 Z" 
+          fill="url(#breastGrad)"/>
+
+    <!-- 3. The Clinic Element: A glowing medical cross cut perfectly into the red breast -->
+    <path d="M 152 135 
+             h -6 v 6 h 6 v 6 h 6 v -6 h 6 v -6 h -6 v -6 h -6 v 6 z" 
+          fill="#FFFFFF" 
+          opacity="0.95" 
+          filter="url(#glow)"/>
+
+    <!-- 4. The Sweeping Wing (Sage green, wrapping the body for a layered 3D feel) -->
+    <path d="M 115 100 
+             C 100 135, 70 165, 35 175 
+             C 75 180, 115 155, 135 115 
+             C 140 105, 125 95, 115 100 Z" 
+          fill="url(#wingGrad)"/>
+
+    <!-- 5. Robin Eye (Simple, gentle, gives life to the bird) -->
+    <circle cx="158" cy="78" r="4.5" fill="#F4F8F7"/>
+    
+    <!-- Subtle eye sparkle -->
+    <circle cx="159" cy="77" r="1.5" fill="#FFFFFF"/>
+
+  </g>
+
+  <!-- Foreground "Vibe" Bubbles overlapping the bird slightly -->
+  <circle cx="160" cy="185" r="4" fill="#FFFFFF" opacity="0.6" filter="url(#glow)"/>
+  <circle cx="140" cy="205" r="2.5" fill="#FFFFFF" opacity="0.4"/>
+  <circle cx="65" cy="55" r="8" fill="#52796F" opacity="0.3"/>
+
+</svg>

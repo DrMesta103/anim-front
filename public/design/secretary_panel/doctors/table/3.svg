@@ -1,0 +1,200 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shadow Filters and Gradients Definitions -->
+  <defs>
+    <filter id="shadow" x="0" y="0" width="1200" height="800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#2F3E46" flood-opacity="0.04"/>
+    </filter>
+    <filter id="card-hover-shadow" x="0" y="0" width="300" height="150" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#2F3E46" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="fade-out" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#F0F4F2"/>
+
+  <!-- ========================================== -->
+  <!-- SIDEBAR (Matching Theme)                   -->
+  <!-- ========================================== -->
+  <rect width="260" height="800" fill="white"/>
+  <rect x="259" y="0" width="1" height="800" fill="#CAD2C5"/>
+
+  <!-- Logo -->
+  <rect x="30" y="40" width="40" height="40" rx="10" fill="#CAD2C5"/>
+  <path d="M42 52C42 50.8954 42.8954 50 44 50H56C57.1046 50 58 50.8954 58 52V68C58 69.1046 57.1046 70 56 70H44C42.8954 70 42 69.1046 42 68V52Z" stroke="#52796F" stroke-width="2"/>
+  <text x="85" y="68" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2F3E46">SageClinic</text>
+
+  <!-- Sidebar Items -->
+  <text x="70" y="162" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Dashboard</text>
+  <text x="70" y="222" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Appts. Management</text>
+
+  <!-- Active State: Doctor Availability -->
+  <rect x="20" y="260" width="220" height="50" rx="12" fill="#52796F"/>
+  <text x="70" y="292" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="white">Doctor Availability</text>
+  <circle cx="45" cy="285" r="3" fill="white"/>
+
+  <!-- Other Items -->
+  <text x="70" y="362" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Patients List</text>
+  <text x="70" y="422" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Cancellations</text>
+  <text x="70" y="482" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Daily Reports</text>
+
+  <!-- ========================================== -->
+  <!-- TOP BAR                                    -->
+  <!-- ========================================== -->
+  <text x="290" y="60" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2F3E46">Doctor Directory</text>
+  
+  <rect x="880" y="35" width="160" height="40" rx="12" fill="#52796F" filter="url(#shadow)"/>
+  <text x="960" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">+ Add Doctor</text>
+
+  <circle cx="1130" cy="55" r="20" fill="#CAD2C5"/>
+  <text x="1100" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46" text-anchor="end">Sarah (Sec)</text>
+
+  <!-- ========================================== -->
+  <!-- MAIN CONTAINER                             -->
+  <!-- ========================================== -->
+  <rect x="290" y="110" width="880" height="660" rx="20" fill="white" filter="url(#shadow)"/>
+  
+  <!-- Search and Filters Area -->
+  <rect x="320" y="132" width="260" height="40" rx="10" fill="#FAFCFB" stroke="#E2E8E4" stroke-width="1"/>
+  <text x="335" y="157" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">🔍</text>
+  <text x="360" y="157" font-family="Arial, sans-serif" font-size="13" fill="#84A98C">Search doctors by name...</text>
+
+  <rect x="595" y="132" width="160" height="40" rx="10" fill="#FAFCFB" stroke="#E2E8E4" stroke-width="1"/>
+  <text x="610" y="157" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2F3E46">All Specialties</text>
+  <text x="735" y="157" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">▼</text>
+
+  <rect x="770" y="132" width="160" height="40" rx="10" fill="#FAFCFB" stroke="#E2E8E4" stroke-width="1"/>
+  <text x="785" y="157" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2F3E46">Status: Active</text>
+  <text x="910" y="157" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">▼</text>
+
+  <!-- Divider line -->
+  <rect x="290" y="190" width="880" height="1" fill="#E2E8E4"/>
+
+  <!-- ========================================== -->
+  <!-- DOCTOR LIST BY SPECIALTY                   -->
+  <!-- ========================================== -->
+  <g clip-path="url(#list-clip)">
+    <clipPath id="list-clip">
+      <rect x="290" y="191" width="880" height="579" rx="20"/>
+    </clipPath>
+
+    <!-- SECTION 1: CARDIOLOGY -->
+    <g transform="translate(320, 220)">
+      <!-- Specialty Header -->
+      <text x="0" y="18" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2F3E46">Cardiology</text>
+      <rect x="95" y="2" width="24" height="20" rx="10" fill="#E8F4F1"/>
+      <text x="107" y="16" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#52796F" text-anchor="middle">3</text>
+      <rect x="0" y="32" width="820" height="1" fill="#E2E8E4"/>
+
+      <!-- Card 1 (Hovered / Clickable state indicating transition to schedule) -->
+      <g transform="translate(0, 50)" style="cursor: pointer;">
+        <rect width="260" height="130" rx="12" fill="white" stroke="#52796F" stroke-width="2" filter="url(#card-hover-shadow)"/>
+        <circle cx="40" cy="45" r="20" fill="#CAD2C5"/>
+        <text x="40" y="50" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46" text-anchor="middle">AV</text>
+        <!-- Active Dot -->
+        <circle cx="55" cy="60" r="5" fill="#52796F" stroke="white" stroke-width="2"/>
+        
+        <text x="75" y="40" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2F3E46">Dr. Alice Vance</text>
+        <text x="75" y="58" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Head of Cardiology</text>
+        
+        <!-- View Schedule Button Area -->
+        <rect x="2" y="90" width="256" height="38" rx="10" fill="#F0F4F2"/>
+        <text x="130" y="114" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#52796F" text-anchor="middle">View Schedule →</text>
+      </g>
+
+      <!-- Card 2 -->
+      <g transform="translate(280, 50)" style="cursor: pointer;">
+        <rect width="260" height="130" rx="12" fill="#FAFCFB" stroke="#E2E8E4" stroke-width="1"/>
+        <circle cx="40" cy="45" r="20" fill="#E2E8E4"/>
+        <text x="40" y="50" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#84A98C" text-anchor="middle">RC</text>
+        <circle cx="55" cy="60" r="5" fill="#52796F" stroke="white" stroke-width="2"/>
+        
+        <text x="75" y="40" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2F3E46">Dr. Robert Chen</text>
+        <text x="75" y="58" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Interventional Cardiology</text>
+        
+        <rect x="1" y="90" width="258" height="1" fill="#E2E8E4"/>
+        <text x="130" y="114" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C" text-anchor="middle">View Schedule</text>
+      </g>
+
+      <!-- Card 3 -->
+      <g transform="translate(560, 50)" style="cursor: pointer;">
+        <rect width="260" height="130" rx="12" fill="#FAFCFB" stroke="#E2E8E4" stroke-width="1"/>
+        <circle cx="40" cy="45" r="20" fill="#E2E8E4"/>
+        <text x="40" y="50" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#84A98C" text-anchor="middle">MT</text>
+        <!-- On Leave Dot -->
+        <circle cx="55" cy="60" r="5" fill="#F5A623" stroke="white" stroke-width="2"/>
+        
+        <text x="75" y="40" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2F3E46">Dr. Michael Torres</text>
+        <text x="75" y="58" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Pediatric Cardiology</text>
+        
+        <rect x="1" y="90" width="258" height="1" fill="#E2E8E4"/>
+        <text x="130" y="114" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C" text-anchor="middle">View Schedule</text>
+      </g>
+    </g>
+
+    <!-- SECTION 2: NEUROLOGY -->
+    <g transform="translate(320, 440)">
+      <!-- Specialty Header -->
+      <text x="0" y="18" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2F3E46">Neurology</text>
+      <rect x="90" y="2" width="24" height="20" rx="10" fill="#E8F4F1"/>
+      <text x="102" y="16" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#52796F" text-anchor="middle">2</text>
+      <rect x="0" y="32" width="820" height="1" fill="#E2E8E4"/>
+
+      <!-- Card 4 -->
+      <g transform="translate(0, 50)" style="cursor: pointer;">
+        <rect width="260" height="130" rx="12" fill="#FAFCFB" stroke="#E2E8E4" stroke-width="1"/>
+        <circle cx="40" cy="45" r="20" fill="#E2E8E4"/>
+        <text x="40" y="50" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#84A98C" text-anchor="middle">RM</text>
+        <circle cx="55" cy="60" r="5" fill="#52796F" stroke="white" stroke-width="2"/>
+        
+        <text x="75" y="40" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2F3E46">Dr. R. Miles</text>
+        <text x="75" y="58" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Senior Neurologist</text>
+        
+        <rect x="1" y="90" width="258" height="1" fill="#E2E8E4"/>
+        <text x="130" y="114" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C" text-anchor="middle">View Schedule</text>
+      </g>
+
+      <!-- Card 5 -->
+      <g transform="translate(280, 50)" style="cursor: pointer;">
+        <rect width="260" height="130" rx="12" fill="#FAFCFB" stroke="#E2E8E4" stroke-width="1"/>
+        <circle cx="40" cy="45" r="20" fill="#E2E8E4"/>
+        <text x="40" y="50" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#84A98C" text-anchor="middle">ES</text>
+        <circle cx="55" cy="60" r="5" fill="#52796F" stroke="white" stroke-width="2"/>
+        
+        <text x="75" y="40" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2F3E46">Dr. Emily Stanton</text>
+        <text x="75" y="58" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Neurosurgeon</text>
+        
+        <rect x="1" y="90" width="258" height="1" fill="#E2E8E4"/>
+        <text x="130" y="114" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C" text-anchor="middle">View Schedule</text>
+      </g>
+    </g>
+
+    <!-- SECTION 3: PEDIATRICS (Fading out) -->
+    <g transform="translate(320, 660)">
+      <text x="0" y="18" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2F3E46">Pediatrics</text>
+      <rect x="90" y="2" width="24" height="20" rx="10" fill="#E8F4F1"/>
+      <text x="102" y="16" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#52796F" text-anchor="middle">4</text>
+      <rect x="0" y="32" width="820" height="1" fill="#E2E8E4"/>
+
+      <!-- Partial Card -->
+      <g transform="translate(0, 50)">
+        <rect width="260" height="130" rx="12" fill="#FAFCFB" stroke="#E2E8E4" stroke-width="1"/>
+        <circle cx="40" cy="45" r="20" fill="#E2E8E4"/>
+        <text x="75" y="40" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2F3E46">Dr. H. Kim</text>
+        <text x="75" y="58" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">General Pediatrics</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- SCROLL INDICATOR / FADE                    -->
+  <!-- ========================================== -->
+  <rect x="290" y="690" width="880" height="80" fill="url(#fade-out)" rx="20"/>
+  
+  <rect x="1155" y="195" width="8" height="560" rx="4" fill="#F0F4F2"/>
+  <rect x="1155" y="200" width="8" height="200" rx="4" fill="#CAD2C5"/> <!-- Thumb -->
+
+</svg>

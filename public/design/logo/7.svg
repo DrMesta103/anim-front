@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient for a premium modern look based on #52796f -->
+    <radialGradient id="bgGrad" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#648e83" />
+      <stop offset="100%" stop-color="#52796f" />
+    </radialGradient>
+
+    <!-- Soft Drop Shadow to make the icon pop -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#21322e" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Base Squircle Background (Perfect for Favicons and App Icons) -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGrad)" />
+
+  <!-- Main Logo Group (Shifted slightly for perfect optical centering) -->
+  <g transform="translate(0, 15)" filter="url(#softGlow)">
+    
+    <!-- 1. THE THOUGHT / MIND CIRCLES -->
+    <!-- Symbolizes gaining mental clarity, therapy, and an expanding consciousness -->
+    <circle cx="256" cy="65" r="4" fill="#cad2c5" />
+    <circle cx="256" cy="48" r="5.5" fill="#cad2c5" />
+    <circle cx="256" cy="28" r="7" fill="#cad2c5" />
+
+    <!-- 2. THE ROBIN BIRD HEAD -->
+    <circle cx="256" cy="95" r="14" fill="#ffffff" />
+
+    <!-- 3. THE ROBIN BODY / CENTER STEM OF THE PSI (Ψ) -->
+    <!-- Graceful, sweeping lines representing a bird soaring upwards -->
+    <path d="M 256 120 
+             C 285 150 290 230 256 330 
+             C 222 230 227 150 256 120 Z" 
+          fill="#ffffff" />
+
+    <!-- 4. LEFT WING / LEFT PSI ARM / LEAF OF GROWTH -->
+    <path d="M 235 250 
+             C 120 260 80 180 80 80 
+             C 110 150 160 190 235 175 Z" 
+          fill="#ffffff" />
+
+    <!-- 5. RIGHT WING / RIGHT PSI ARM / LEAF OF GROWTH -->
+    <path d="M 277 250 
+             C 392 260 432 180 " fill="#fff" />
+             </g>
+             </svg>

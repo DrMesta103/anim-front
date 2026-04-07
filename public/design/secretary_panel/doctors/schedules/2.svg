@@ -1,0 +1,267 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Filters & Definitions -->
+  <defs>
+    <filter id="shadow" x="0" y="0" width="1200" height="800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#2F3E46" flood-opacity="0.05"/>
+    </filter>
+    <filter id="card-shadow" x="-10" y="-10" width="200" height="200" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#2F3E46" flood-opacity="0.08"/>
+    </filter>
+    <!-- Avatar Gradients -->
+    <linearGradient id="avatar-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#CAD2C5"/>
+      <stop offset="100%" stop-color="#84A98C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="1200" height="800" fill="#F0F4F2"/>
+
+  <!-- ========================================== -->
+  <!-- SIDEBAR                                    -->
+  <!-- ========================================== -->
+  <rect width="260" height="800" fill="white"/>
+  <rect x="259" y="0" width="1" height="800" fill="#CAD2C5"/>
+
+  <!-- Logo -->
+  <rect x="30" y="40" width="40" height="40" rx="10" fill="#CAD2C5"/>
+  <path d="M42 52C42 50.8954 42.8954 50 44 50H56C57.1046 50 58 50.8954 58 52V68C58 69.1046 57.1046 70 56 70H44C42.8954 70 42 69.1046 42 68V52Z" stroke="#52796F" stroke-width="2"/>
+  <text x="85" y="68" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2F3E46">SageClinic</text>
+
+  <!-- Sidebar Items -->
+  <text x="70" y="162" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Dashboard</text>
+  <text x="70" y="222" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Appts. Management</text>
+
+  <!-- Active State: Doctor Schedules -->
+  <rect x="20" y="260" width="220" height="50" rx="12" fill="#52796F"/>
+  <text x="70" y="292" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="white">Doctor Schedules</text>
+  <circle cx="45" cy="285" r="3" fill="white"/>
+
+  <!-- Other Items -->
+  <text x="70" y="362" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Patients List</text>
+  <text x="70" y="422" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Cancellations</text>
+  <text x="70" y="482" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Daily Reports</text>
+
+  <!-- ========================================== -->
+  <!-- TOP BAR                                    -->
+  <!-- ========================================== -->
+  <text x="290" y="60" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2F3E46">Doctor Schedules</text>
+  
+  <rect x="830" y="35" width="130" height="40" rx="10" fill="white" stroke="#52796F" stroke-width="1" filter="url(#shadow)"/>
+  <text x="895" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#52796F" text-anchor="middle">+ Add Shift</text>
+
+  <rect x="975" y="35" width="165" height="40" rx="10" fill="#52796F" filter="url(#shadow)"/>
+  <text x="1057" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">+ Book Appt.</text>
+
+  <circle cx="1165" cy="55" r="20" fill="#CAD2C5"/>
+  <text x="1135" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46" text-anchor="end">Sarah (Sec)</text>
+
+  <!-- ========================================== -->
+  <!-- DOCTOR SELECTION & INFO HEADER             -->
+  <!-- ========================================== -->
+  <rect x="290" y="100" width="880" height="85" rx="16" fill="white" filter="url(#shadow)"/>
+  
+  <!-- Selected Doctor Avatar & Details -->
+  <circle cx="340" cy="142" r="28" fill="url(#avatar-bg)"/>
+  <text x="385" y="135" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2F3E46">Dr. Alice Vance</text>
+  <text x="385" y="155" font-family="Arial, sans-serif" font-size="13" fill="#84A98C">Cardiology • Room 204</text>
+  
+  <!-- Dropdown to change doctor -->
+  <rect x="560" y="125" width="30" height="30" rx="6" fill="#F0F4F2"/>
+  <text x="575" y="145" font-family="Arial, sans-serif" font-size="12" fill="#52796F" text-anchor="middle">▼</text>
+
+  <!-- Divider -->
+  <rect x="630" y="115" width="1" height="55" fill="#E2E8E4"/>
+
+  <!-- Weekly Stats -->
+  <text x="660" y="135" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Weekly Shifts</text>
+  <text x="660" y="158" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2F3E46">32 Hours</text>
+
+  <text x="780" y="135" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Booked / Cap</text>
+  <text x="780" y="158" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2F3E46">24 / 40</text>
+
+  <text x="900" y="135" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Cancellations</text>
+  <text x="900" y="158" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FF4D4D">2 This Week</text>
+
+  <!-- ========================================== -->
+  <!-- CALENDAR CONTROLS                          -->
+  <!-- ========================================== -->
+  <rect x="290" y="210" width="880" height="50" rx="10" fill="white"/>
+  
+  <!-- Date Navigation -->
+  <rect x="300" y="220" width="30" height="30" rx="6" fill="#F0F4F2"/>
+  <text x="315" y="240" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#52796F" text-anchor="middle">&lt;</text>
+  
+  <rect x="340" y="220" width="30" height="30" rx="6" fill="#F0F4F2"/>
+  <text x="355" y="240" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#52796F" text-anchor="middle">&gt;</text>
+  
+  <text x="390" y="240" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2F3E46">Mar 30 - Apr 03, 2026</text>
+  <rect x="580" y="224" width="45" height="22" rx="11" fill="#E8F4F1"/>
+  <text x="602" y="239" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#52796F" text-anchor="middle">Today</text>
+
+  <!-- View Toggles -->
+  <rect x="980" y="220" width="180" height="32" rx="6" fill="#F0F4F2"/>
+  <text x="1010" y="241" font-family="Arial, sans-serif" font-size="13" fill="#84A98C" text-anchor="middle">Day</text>
+  <rect x="1040" y="222" width="60" height="28" rx="4" fill="white" filter="url(#shadow)"/>
+  <text x="1070" y="241" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2F3E46" text-anchor="middle">Week</text>
+  <text x="1130" y="241" font-family="Arial, sans-serif" font-size="13" fill="#84A98C" text-anchor="middle">Month</text>
+
+  <!-- ========================================== -->
+  <!-- WEEKLY CALENDAR GRID                       -->
+  <!-- ========================================== -->
+  <rect x="290" y="270" width="880" height="510" rx="16" fill="white" filter="url(#shadow)"/>
+
+  <!-- Grid Dimensions: 
+       X axis: Time (290-350), Mon (350-514), Tue (514-678), Wed (678-842), Thu (842-1006), Fri (1006-1170)
+       Y axis: Header (270-320), 08:00 AM (320) to 04:00 PM (800) -> 60px per hour
+  -->
+
+  <!-- Day Headers -->
+  <rect x="290" y="270" width="880" height="50" rx="16" fill="#FAFCFB"/>
+  <path d="M290 320 L 1170 320" stroke="#E2E8E4" stroke-width="1"/>
+
+  <text x="432" y="295" font-family="Arial, sans-serif" font-size="12" fill="#84A98C" text-anchor="middle">MON</text>
+  <text x="432" y="312" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2F3E46" text-anchor="middle">30</text>
+
+  <!-- Highlight Tuesday (Today) -->
+  <rect x="575" y="275" width="40" height="40" rx="8" fill="#52796F"/>
+  <text x="596" y="292" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">TUE</text>
+  <text x="596" y="310" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">31</text>
+
+  <text x="760" y="295" font-family="Arial, sans-serif" font-size="12" fill="#84A98C" text-anchor="middle">WED</text>
+  <text x="760" y="312" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2F3E46" text-anchor="middle">01</text>
+
+  <text x="924" y="295" font-family="Arial, sans-serif" font-size="12" fill="#84A98C" text-anchor="middle">THU</text>
+  <text x="924" y="312" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2F3E46" text-anchor="middle">02</text>
+
+  <text x="1088" y="295" font-family="Arial, sans-serif" font-size="12" fill="#84A98C" text-anchor="middle">FRI</text>
+  <text x="1088" y="312" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2F3E46" text-anchor="middle">03</text>
+
+  <!-- Vertical Grid Lines -->
+  <path d="M350 270 V 780" stroke="#E2E8E4" stroke-width="1"/>
+  <path d="M514 270 V 780" stroke="#E2E8E4" stroke-width="1"/>
+  <path d="M678 270 V 780" stroke="#E2E8E4" stroke-width="1"/>
+  <path d="M842 270 V 780" stroke="#E2E8E4" stroke-width="1"/>
+  <path d="M1006 270 V 780" stroke="#E2E8E4" stroke-width="1"/>
+
+  <!-- Horizontal Grid Lines & Time Labels -->
+  <g fill="#84A98C" font-family="Arial, sans-serif" font-size="11" text-anchor="end">
+    <text x="340" y="325">08 AM</text> <path d="M350 320 H 1170" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="340" y="385">09 AM</text> <path d="M350 380 H 1170" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="340" y="445">10 AM</text> <path d="M350 440 H 1170" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="340" y="505">11 AM</text> <path d="M350 500 H 1170" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="340" y="565">12 PM</text> <path d="M350 560 H 1170" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="340" y="625">01 PM</text> <path d="M350 620 H 1170" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="340" y="685">02 PM</text> <path d="M350 680 H 1170" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="340" y="745">03 PM</text> <path d="M350 740 H 1170" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- DOCTOR AVAILABILITY BLOCKS (SHIFTS)        -->
+  <!-- ========================================== -->
+  <!-- Shows the baseline schedule. Appointments are booked *inside* these blocks -->
+  
+  <!-- Monday: 08:00 AM - 03:00 PM -->
+  <rect x="351" y="321" width="162" height="419" fill="#E8F4F1" opacity="0.4"/>
+  <rect x="351" y="321" width="162" height="419" fill="none" stroke="#84A98C" stroke-width="1" stroke-dasharray="4 4"/>
+  
+  <!-- Tuesday: 08:00 AM - 01:00 PM -->
+  <rect x="515" y="321" width="162" height="299" fill="#E8F4F1" opacity="0.4"/>
+  <rect x="515" y="321" width="162" height="299" fill="none" stroke="#84A98C" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Wednesday: Day Off (Gray background) -->
+  <rect x="679" y="321" width="162" height="459" fill="#FAFCFB"/>
+  <text x="760" y="520" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#CAD2C5" text-anchor="middle" transform="rotate(-90 760 520)">DAY OFF</text>
+
+  <!-- Thursday: 09:00 AM - 03:00 PM -->
+  <rect x="843" y="381" width="162" height="359" fill="#E8F4F1" opacity="0.4"/>
+  <rect x="843" y="381" width="162" height="359" fill="none" stroke="#84A98C" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Friday: 08:00 AM - 12:00 PM -->
+  <rect x="1007" y="321" width="162" height="239" fill="#E8F4F1" opacity="0.4"/>
+  <rect x="1007" y="321" width="162" height="239" fill="none" stroke="#84A98C" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- ========================================== -->
+  <!-- SCHEDULES (APPOINTMENTS) & CANCELLATIONS   -->
+  <!-- ========================================== -->
+
+  <!-- Card 1: Mon 08:30 - 09:15 (Completed) -->
+  <g transform="translate(356, 350)">
+    <rect width="152" height="45" rx="6" fill="white" filter="url(#card-shadow)"/>
+    <rect width="4" height="45" rx="2" fill="#84A98C"/>
+    <text x="12" y="16" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2F3E46">John Doe</text>
+    <text x="12" y="30" font-family="Arial, sans-serif" font-size="10" fill="#84A98C">08:30 - 09:15 AM</text>
+    <rect x="110" y="6" width="36" height="14" rx="4" fill="#F0F4F2"/>
+    <text x="128" y="16" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#84A98C" text-anchor="middle">Done</text>
+  </g>
+
+  <!-- Card 2: Mon 10:00 - 10:45 (Canceled) -->
+  <g transform="translate(356, 440)">
+    <!-- Red background for canceled schedules -->
+    <rect width="152" height="45" rx="6" fill="#FFF0F0" stroke="#FF4D4D" stroke-width="1" stroke-dasharray="2 2"/>
+    <rect width="4" height="45" rx="2" fill="#FF4D4D"/>
+    <text x="12" y="16" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FF4D4D" text-decoration="line-through">Sarah Jenkins</text>
+    <text x="12" y="30" font-family="Arial, sans-serif" font-size="10" fill="#FF4D4D">10:00 - 10:45 AM</text>
+    <!-- Action link for canceled card -->
+    <text x="12" y="41" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#52796F" text-decoration="underline">Reschedule</text>
+    <rect x="100" y="6" width="46" height="14" rx="4" fill="#FF4D4D" fill-opacity="0.1"/>
+    <text x="123" y="16" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#FF4D4D" text-anchor="middle">Canceled</text>
+  </g>
+
+  <!-- Card 3: Mon 01:00 - 02:00 (Scheduled) -->
+  <g transform="translate(356, 620)">
+    <rect width="152" height="60" rx="6" fill="white" filter="url(#card-shadow)"/>
+    <rect width="4" height="60" rx="2" fill="#52796F"/>
+    <text x="12" y="16" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2F3E46">Michael Chang</text>
+    <text x="12" y="30" font-family="Arial, sans-serif" font-size="10" fill="#84A98C">01:00 - 02:00 PM</text>
+    <text x="12" y="46" font-family="Arial, sans-serif" font-size="10" fill="#84A98C">Reason: Checkup</text>
+    <!-- Hover Action Menu Indicator -->
+    <circle cx="140" cy="14" r="2" fill="#CAD2C5"/>
+    <circle cx="140" cy="20" r="2" fill="#CAD2C5"/>
+    <circle cx="140" cy="26" r="2" fill="#CAD2C5"/>
+  </g>
+
+  <!-- Card 4: Tue 09:00 - 10:00 (Scheduled / Next up) -->
+  <g transform="translate(520, 380)">
+    <rect width="152" height="60" rx="6" fill="white" stroke="#52796F" stroke-width="1.5" filter="url(#card-shadow)"/>
+    <rect width="4" height="60" rx="2" fill="#52796F"/>
+    <text x="12" y="16" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2F3E46">Emily Blunt</text>
+    <text x="12" y="30" font-family="Arial, sans-serif" font-size="10" fill="#84A98C">09:00 - 10:00 AM</text>
+    <text x="12" y="46" font-family="Arial, sans-serif" font-size="10" fill="#84A98C">Room: 204</text>
+    <rect x="100" y="6" width="46" height="14" rx="4" fill="#E8F4F1"/>
+    <text x="123" y="16" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#52796F" text-anchor="middle">Arrived</text>
+  </g>
+
+  <!-- Card 5: Tue 11:30 - 12:15 (Canceled & hovering on "Cancel" menu example) -->
+  <g transform="translate(520, 530)">
+    <rect width="152" height="45" rx="6" fill="white" filter="url(#card-shadow)"/>
+    <rect width="4" height="45" rx="2" fill="#52796F"/>
+    <text x="12" y="16" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2F3E46">David L.</text>
+    <text x="12" y="30" font-family="Arial, sans-serif" font-size="10" fill="#84A98C">11:30 - 12:15 PM</text>
+    
+    <!-- Simulated Hover State over the ... menu -->
+    <rect x="85" y="8" width="60" height="26" rx="4" fill="white" filter="url(#card-shadow)"/>
+    <text x="115" y="25" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#FF4D4D" text-anchor="middle">Cancel</text>
+  </g>
+
+  <!-- Card 6: Thu 09:30 - 10:30 (Scheduled) -->
+  <g transform="translate(848, 410)">
+    <rect width="152" height="60" rx="6" fill="white" filter="url(#card-shadow)"/>
+    <rect width="4" height="60" rx="2" fill="#52796F"/>
+    <text x="12" y="16" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2F3E46">Robert Miles</text>
+    <text x="12" y="30" font-family="Arial, sans-serif" font-size="10" fill="#84A98C">09:30 - 10:30 AM</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- CURRENT TIME INDICATOR (Tuesday 09:45 AM)  -->
+  <!-- ========================================== -->
+  <!-- Y calculation: 09:00 is 380, 10:00 is 440. 09:45 is 380 + (45/60)*60 = 425 -->
+  <g transform="translate(0, 425)">
+    <path d="M514 0 H 678" stroke="#FF4D4D" stroke-width="2"/>
+    <circle cx="514" cy="0" r="4" fill="#FF4D4D"/>
+    <!-- Small time tag attached to the line -->
+    <rect x="635" y="-10" width="40" height="20" rx="10" fill="#FF4D4D"/>
+    <text x="655" y="4" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">09:45</text>
+  </g>
+
+</svg>

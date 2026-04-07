@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { DoctorDataType } from "./types";
+import { toastAxiosError, toastAxiosSuccess } from "@/shared/lib/toast";
 
 export const fetchAllDoctorsthunk = createAsyncThunk("/doctor/getall", async () => {
   return await axios
@@ -11,21 +12,40 @@ export const fetchAllDoctorsthunk = createAsyncThunk("/doctor/getall", async () 
 
 export const addDoctorThunk = createAsyncThunk("/doctor/add", async (data: DoctorDataType) => {
   return await axios
-    .post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/admin/users/doctors`, data, { withCredentials: true })
-    .then((res) => res.data)
-    .catch(() => false);
+    .post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/admin/users/doctor`, data, { withCredentials: true })
+    .then((res) => {
+      toastAxiosSuccess(res);
+      return res.data.data;
+    })
+    .catch((err) => {
+      toastAxiosError(err);
+      return false;
+    });
 });
 
 export const updateDoctorThunk = createAsyncThunk("/doctor/update", async ({ id, data }: { id: string; data: DoctorDataType }) => {
   return await axios
-    .put(`${process.env.NEXT_PUBLIC_BACKEND_URL}/admin/users/doctors/${id}`, data, { withCredentials: true })
-    .then((res) => res.data)
-    .catch(() => false);
+    .patch(
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/admin/users/doctor/${id}`,
+      { ...data, password: data.password.length === 0 ? null : data.password },
+      { withCredentials: true },
+    )
+    .then((res) => {
+      toastAxiosSuccess(res);
+      return res.data.data;
+    })
+    .catch((err) => {
+      toastAxiosError(err);
+      return false;
+    });
 });
 
 export const deleteDoctorThunk = createAsyncThunk("/doctor/delete", async (id: string) => {
   return await axios
-    .delete(`${process.env.NEXT_PUBLIC_BACKEND_URL}/admin/users/doctors/${id}`, { withCredentials: true })
-    .then(() => id)
+    .delete(`${process.env.NEXT_PUBLIC_BACKEND_URL}/admin/users/doctor/${id}`, { withCredentials: true })
+    .then((res) => {
+      toastAxiosSuccess(res);
+      return res.data.data;
+    })
     .catch(() => false);
 });

@@ -1,9 +1,9 @@
 "use client";
 
 import { adminPanelComponentsMap } from "@/features/admin_panel/constants";
-import AdminHeader from "@/shared/components/layout/admin_panel/AdminHeader";
-import AdminNavbar from "@/shared/components/layout/admin_panel/AdminNavbar";
-import AdminSidebar from "@/shared/components/layout/admin_panel/AdminSidebar";
+import AdminHeader from "@/shared/components/layout/admin_panel/Header";
+import AdminNavbar from "@/shared/components/layout/admin_panel/Navbar";
+import AdminSidebar from "@/shared/components/layout/admin_panel/Sidebar";
 import { RootState } from "@/store";
 import { useSelector } from "react-redux";
 

@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="bgGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" style="stop-color:#6b9e92;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3d5c54;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient id="brainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#cae8e2;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle cx="32" cy="32" r="31" fill="url(#bgGrad)" />
+  <circle cx="32" cy="32" r="31" fill="none" stroke="#2e4a43" stroke-width="1.2" />
+
+  <!-- Subtle inner glow ring -->
+  <circle cx="32" cy="32" r="27" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.2" />
+
+  <!-- ═══ BRAIN outline behind R ═══ -->
+  <!-- Left Hemisphere -->
+  <path d="
+    M31 15
+    C26 13, 17 15, 15 21
+    C12 26, 13 31, 15 35
+    C13 39, 14 44, 18 46
+    C21 48, 26 48, 29 47
+    C30 48, 31 48, 31 48
+    L31 15Z
+  " fill="url(#brainGrad)" opacity="0.13"/>
+
+  <!-- Right Hemisphere -->
+  <path d="
+    M33 15
+    C38 13, 47 15, 49 21
+    C52 26, 51 31, 49 35
+    C51 39, 50 44, 46 46
+    C43 48, 38 48, 35 47
+    C34 48, 33 48, 33 48
+    L33 15Z
+  " fill="url(#brainGrad)" opacity="0.10"/>
+
+  <!-- Brain outline strokes (subtle) -->
+  <path d="
+    M31 15
+    C26 13, 17 15, 15 21
+    C12 26, 13 31, 15 35
+    C13 39, 14 44, 18 46
+    C21 48, 26 48, 29 47
+    C30 48, 31 48, 31 48
+  " fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.25" stroke-linecap="round"/>
+
+  <path d="
+    M33 15
+    C38 13, 47 15, 49 21
+    C52 26, 51 31, 49 35
+    C51 39, 50 44, 46 46
+    C43 48, 38 48, 35 47
+    C34 48, 33 48, 33 48
+  " fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.20" stroke-linecap="round"/>
+
+  <!-- Brain fold lines subtle -->
+  <path d="M20 23 Q17 27 19 32" fill="none" stroke="#ffffff" stroke-width="0.8" stroke-linecap="round" opacity="0.18"/>
+  <path d="M18 33 Q16 37 19 41" fill="none" stroke="#ffffff" stroke-width="0.8" stroke-linecap="round" opacity="0.18"/>
+  <path d="M44 23 Q47 27 45 32" fill="none" stroke="#ffffff" stroke-width="0.8" stroke-linecap="round" opacity="0.15"/>
+  <path d="M46 33 Q48 37 45 41" fill="none" stroke="#ffffff" stroke-width="0.8" stroke-linecap="round" opacity="0.15"/>
+
+  <!-- ═══ PSI Symbol (ψ) very subtle watermark behind R ═══ -->
+  <g transform="translate(32,32)" opacity="0.12">
+    <line x1="0" y1="-14" x2="0" y2="14" stroke="#ffffff" stroke-width="3"/>
+    <path d="M-10 -8 Q-14 0 -10 8" fill="none" stroke="#ffffff" stroke-width="3"/>
+    <path d="M10 -8 Q14 0 10 8" fill="none" stroke="#ffffff" stroke-width="3"/>
+    <line x1="-7" y1="14" x2="7" y2="14" stroke="#ffffff" stroke-width="3"/>
+  </g>
+
+  <!-- ═══ BOLD R — Main Element ═══ -->
+  <g transform="translate(17, 11)">
+    <!-- R stem -->
+    <rect x="0" y="0" width="6" height="28" rx="1.5" fill="#ffffff"/>
+
+    <!-- R bowl (top bump) -->
+    <path d="
+      M6 0
+      L20 0
+      Q28 0 28 9
+      Q28 17 20 17
+      L6 17
+    " fill="#ffffff"/>
+
+    <!-- R bowl inner cutout -->
+    <path d="
+      M6 4.5
+      L19 4.5
+      Q23 4.5 23 9
+      Q23 13 19 13
+      L6 13
+    " fill="#52796f"/>
+
+    <!-- R leg (diagonal) -->
+    <path d="
+      M6 17
+      L20 17
+      L30 28
+      L23 28
+      L14 19
+      L6 19
+      Z
+    " fill="#ffffff"/>
+  </g>
+
+  <!-- Thin accent line under R (mind/frequency wave) -->
+  <path d="M14 52 Q20 48 27 52 Q34 56 41 52 Q47 48 50 52"
+        fill="none" stroke="#a8d5cc" stroke-width="1.5"
+        stroke-linecap="round" opacity="0.7"/>
+
+</svg>

@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%" style="font-family: 'Inter', -apple-system, sans-serif;">
+  <defs>
+    <filter id="modal-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000" flood-opacity="0.15" />
+    </filter>
+    <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <style>
+      .btn-hover:hover { opacity: 0.9; cursor: pointer; }
+      .date-btn:hover { stroke: #2563EB; cursor: pointer; }
+      .input-field { fill: #ffffff; stroke: #E2E8F0; }
+    </style>
+  </defs>
+
+  <!-- BACKGROUND OVERLAY -->
+  <rect x="0" y="0" width="1200" height="800" fill="#0F172A" opacity="0.6" />
+
+  <!-- MODAL CONTAINER -->
+  <g transform="translate(200, 100)">
+    <rect x="0" y="0" width="800" height="600" rx="16" fill="#ffffff" filter="url(#modal-shadow)" />
+    
+    <!-- Modal Header -->
+    <path d="M0 16 C0 7.16 7.16 0 16 0 L784 0 C792.84 0 800 7.16 800 16 L800 70 L0 70 Z" fill="#F8FAFC" />
+    <line x1="0" y1="70" x2="800" y2="70" stroke="#E2E8F0" stroke-width="1" />
+    <text x="30" y="42" font-size="20" font-weight="bold" fill="#0F172A">Create New Schedule</text>
+    <text x="245" y="41" font-size="14" font-weight="500" fill="#64748B">- Dr. Sarah Jenkins</text>
+    
+    <!-- Close Icon -->
+    <g transform="translate(740, 25)" class="btn-hover">
+      <circle cx="10" cy="10" r="15" fill="#F1F5F9" />
+      <line x1="4" y1="4" x2="16" y2="16" stroke="#64748B" stroke-width="2" stroke-linecap="round" />
+      <line x1="16" y1="4" x2="4" y2="16" stroke="#64748B" stroke-width="2" stroke-linecap="round" />
+    </g>
+
+    <!-- CONTENT: SPLIT LAYOUT -->
+    <!-- Left Pane: Multi-Day Selection Calendar -->
+    <g transform="translate(30, 90)">
+      <text x="0" y="15" font-size="16" font-weight="600" fill="#1E293B">1. Select Days</text>
+      <text x="0" y="35" font-size="13" fill="#64748B">Choose one or more days to apply shifts.</text>
+      
+      <!-- Calendar UI -->
+      <rect x="0" y="55" width="340" height="340" rx="10" fill="#ffffff" stroke="#E2E8F0" />
+      
+      <!-- Month/Year -->
+      <text x="170" y="85" font-size="15" font-weight="600" fill="#0F172A" text-anchor="middle">April 2026</text>
+      <!-- Arrows -->
+      <path d="M 50 80 l -5 -5 l 5 -5" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" />
+      <path d="M 290 70 l 5 5 l -5 5" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" />
+      
+      <!-- Days Header -->
+      <g font-size="12" font-weight="600" fill="#94A3B8" text-anchor="middle">
+        <text x="35" y="120">Mo</text><text x="80" y="120">Tu</text><text x="125" y="120">We</text>
+        <text x="170" y="120">Th</text><text x="215" y="120">Fr</text><text x="260" y="120">Sa</text><text x="305" y="120">Su</text>
+      </g>
+
+      <!-- Calendar Grid (Dates) -->
+      <g font-size="14" font-weight="500" fill="#334155" text-anchor="middle">
+        <!-- Row 1 -->
+        <text x="35" y="160" fill="#CBD5E1">30</text><text x="80" y="160" fill="#CBD5E1">31</text>
+        <text x="125" y="160">1</text><text x="170" y="160">2</text><text x="215" y="160">3</text><text x="260" y="160">4</text><text x="305" y="160">5</text>
+        
+        <!-- Row 2 -->
+        <text x="35" y="205">6</text><text x="80" y="205">7</text><text x="125" y="205">8</text><text x="170" y="205">9</text><text x="215" y="205">10</text>
+        <!-- Selected Dates (11, 13, 15) -->
+        <circle cx="260" cy="200" r="16" fill="#2563EB" />
+        <text x="260" y="205" fill="#ffffff" font-weight="600">11</text>
+        <text x="305" y="205">12</text>
+        
+        <!-- Row 3 -->
+        <circle cx="35" cy="245" r="16" fill="#2563EB" />
+        <text x="35" y="250" fill="#ffffff" font-weight="600">13</text>
+        <text x="80" y="250">14</text>
+        <circle cx="125" cy="245" r="16" fill="#2563EB" />
+        <text x="125" y="250" fill="#ffffff" font-weight="600">15</text>
+        <text x="170" y="250">16</text><text x="215" y="250">17</text><text x="260" y="250">18</text><text x="305" y="250">19</text>
+        
+        <!-- Row 4 -->
+        <text x="35" y="295">20</text><text x="80" y="295">21</text><text x="125" y="295">22</text><text x="170" y="295">23</text>
+        <text x="215" y="295">24</text><text x="260" y="295">25</text><text x="305" y="295">26</text>
+        
+        <!-- Row 5 -->
+        <text x="35" y="340">27</text><text x="80" y="340">28</text><text x="125" y="340">29</text><text x="170" y="340">30</text>
+        <text x="215" y="340" fill="#CBD5E1">1</text><text x="260" y="340" fill="#CBD5E1">2</text><text x="305" y="340" fill="#CBD5E1">3</text>
+      </g>
+      
+      <!-- Selected Dates Info -->
+      <rect x="0" y="410" width="340" height="40" rx="6" fill="#EFF6FF" stroke="#BFDBFE" />
+      <text x="15" y="435" font-size="13" font-weight="500" fill="#1E40AF">3 days selected</text>
+    </g>
+
+    <!-- Vertical Divider -->
+    <line x1="400" y1="90" x2="400" y2="500" stroke="#E2E8F0" stroke-width="1" />
+
+    <!-- Right Pane: Shifts Definition -->
+    <g transform="translate(430, 90)">
+      <text x="0" y="15" font-size="16" font-weight="600" fill="#1E293B">2. Define Shifts</text>
+      <text x="0" y="35" font-size="13" fill="#64748B">Set working hours for the selected days.</text>
+
+      <!-- Shift 1 -->
+      <rect x="0" y="55" width="340" height="90" rx="8" fill="#F8FAFC" stroke="#E2E8F0" />
+      <text x="15" y="75" font-size="13" font-weight="600" fill="#475569">Shift 1</text>
+      
+      <g transform="translate(15, 90)">
+        <!-- Start Time -->
+        <rect x="0" y="0" width="100" height="36" rx="6" class="input-field" />
+        <text x="12" y="22" font-size="13" fill="#0F172A">08:00 AM</text>
+        <!-- End Time -->
+        <text x="110" y="22" font-size="13" fill="#64748B">to</text>
+        <rect x="135" y="0" width="100" height="36" rx="6" class="input-field" />
+        <text x="147" y="22" font-size="13" fill="#0F172A">12:00 PM</text>
+        
+        <!-- Delete Shift Icon -->
+        <circle cx="295" cy="18" r="14" fill="#FEE2E2" class="btn-hover" />
+        <line x1="290" y1="13" x2="300" y2="23" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round" />
+        <line x1="300" y1="13" x2="290" y2="23" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round" />
+      </g>
+
+      <!-- Shift 2 -->
+      <rect x="0" y="160" width="340" height="90" rx="8" fill="#F8FAFC" stroke="#E2E8F0" />
+      <text x="15" y="180" font-size="13" font-weight="600" fill="#475569">Shift 2</text>
+      
+      <g transform="translate(15, 195)">
+        <!-- Start Time -->
+        <rect x="0" y="0" width="100" height="36" rx="6" class="input-field" />
+        <text x="12" y="22" font-size="13" fill="#0F172A">01:00 PM</text>
+        <!-- End Time -->
+        <text x="110" y="22" font-size="13" fill="#64748B">to</text>
+        <rect x="135" y="0" width="100" height="36" rx="6" class="input-field" />
+        <text x="147" y="22" font-size="13" fill="#0F172A">05:00 PM</text>
+        
+        <!-- Delete Shift Icon -->
+        <circle cx="295" cy="18" r="14" fill="#FEE2E2" class="btn-hover" />
+        <line x1="290" y1="13" x2="300" y2="23" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round" />
+        <line x1="300" y1="13" x2="290" y2="23" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round" />
+      </g>
+
+      <!-- Add Shift Button -->
+      <g transform="translate(0, 265)" class="btn-hover">
+        <rect x="0" y="0" width="340" height="40" rx="8" fill="none" stroke="#2563EB" stroke-width="1" stroke-dasharray="4" />
+        <text x="170" y="25" font-size="14" font-weight="500" fill="#2563EB" text-anchor="middle">+ Add another shift</text>
+      </g>
+      
+      <!-- Room Assignment -->
+      <text x="0" y="345" font-size="14" font-weight="600" fill="#1E293B">Assigned Room</text>
+      <rect x="0" y="355" width="340" height="40" rx="6" class="input-field" />
+      <text x="15" y="380" font-size="14" fill="#0F172A">Room 204 (Cardiology Dept)</text>
+      <path d="M315 370 l5 5 l5 -5" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <!-- FOOTER / ACTIONS -->
+    <line x1="0" y1="520" x2="800" y2="520" stroke="#E2E8F0" stroke-width="1" />
+    <rect x="0" y="520" width="800" height="80" rx="0" fill="#F8FAFC" clip-path="inset(0 0 -16px 0 round 0 0 16px 16px)" />
+    
+    <g transform="translate(530, 540)" class="btn-hover">
+      <rect x="0" y="0" width="100" height="40" rx="8" fill="#ffffff" stroke="#CBD5E1" />
+      <text x="50" y="25" font-size="14" font-weight="500" fill="#475569" text-anchor="middle">Cancel</text>
+    </g>
+    
+    <g transform="translate(645, 540)" class="btn-hover">
+      <rect x="0" y="0" width="125" height="40" rx="8" fill="url(#primary-grad)" />
+      <text x="62.5" y="25" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle">Save Schedules</text>
+    </g>
+    
+  </g>
+</svg>

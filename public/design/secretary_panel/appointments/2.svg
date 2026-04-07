@@ -1,0 +1,211 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#F0F4F2"/>
+
+  <!-- SIDEBAR -->
+  <rect width="260" height="800" fill="white"/>
+  <rect x="259" y="0" width="1" height="800" fill="#CAD2C5"/> <!-- Border -->
+
+  <!-- Logo -->
+  <rect x="30" y="40" width="40" height="40" rx="10" fill="#CAD2C5"/>
+  <path d="M42 52C42 50.8954 42.8954 50 44 50H56C57.1046 50 58 50.8954 58 52V68C58 69.1046 57.1046 70 56 70H44C42.8954 70 42 69.1046 42 68V52Z" stroke="#52796F" stroke-width="2"/>
+  <text x="85" y="68" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2F3E46">SageClinic</text>
+
+  <!-- Sidebar Items -->
+  <text x="70" y="162" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Dashboard</text>
+
+  <!-- Active State: Appointments Management -->
+  <rect x="20" y="200" width="220" height="50" rx="12" fill="#52796F"/>
+  <text x="70" y="232" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="white">Appts. Management</text>
+  <circle cx="45" cy="225" r="3" fill="white"/>
+
+  <!-- Other Items -->
+  <text x="70" y="302" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Doctor Availability</text>
+  <text x="70" y="362" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Patients List</text>
+  <text x="70" y="422" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Cancellations</text>
+  <text x="70" y="482" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Daily Reports</text>
+
+  <!-- TOP BAR -->
+  <text x="290" y="60" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2F3E46">Appointments Management</text>
+  
+  <!-- Add New Appointment Button -->
+  <rect x="880" y="35" width="160" height="40" rx="12" fill="#52796F" filter="url(#shadow)"/>
+  <text x="960" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">+ New Schedule</text>
+
+  <circle cx="1130" cy="55" r="20" fill="#CAD2C5"/>
+  <text x="1100" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46" text-anchor="end">Sarah (Sec)</text>
+
+  <!-- TIMELINE CONTAINER -->
+  <rect x="290" y="110" width="880" height="660" rx="25" fill="white" filter="url(#shadow)"/>
+  
+  <!-- Top Table Header -->
+  <text x="320" y="155" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2F3E46">2026-05-04 Timeline</text>
+  
+  <!-- Search Bar -->
+  <rect x="580" y="130" width="220" height="36" rx="8" fill="#F0F4F2"/>
+  <text x="595" y="153" font-family="Arial, sans-serif" font-size="13" fill="#84A98C">🔍 Search name...</text>
+
+  <!-- Specialty Filter -->
+  <rect x="815" y="130" width="160" height="36" rx="8" fill="#F0F4F2"/>
+  <text x="895" y="153" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2F3E46" text-anchor="middle">All Specialties ▼</text>
+
+  <!-- Calendar Icon -->
+  <rect x="990" y="130" width="36" height="36" rx="8" fill="#E8F4F1" stroke="#52796F" stroke-width="1"/>
+  <text x="1008" y="154" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">📅</text>
+
+  <rect x="290" y="180" width="880" height="1" fill="#E2E8E4"/>
+
+  <!-- SCROLLABLE TIMELINE AREA -->
+  <!-- Clip Path to restrict wide content -->
+  <clipPath id="timeline-clip">
+    <rect x="460" y="181" width="710" height="560"/>
+  </clipPath>
+
+  <g clip-path="url(#timeline-clip)">
+    <!-- Translated Timeline (Simulating horizontal scroll, scrolled to 08:00 AM) -->
+    <!-- Scale: 1 hour = 180px. 6:00 AM is at x=460. 8:00 AM is at x=460 + 360 = 820. 
+         To show 8:00 AM at the start of the visible area (x=460), we translate by -360. -->
+    <g transform="translate(-360, 0)">
+      
+      <!-- Timeline Header Background -->
+      <rect x="460" y="181" width="3240" height="45" fill="#F0F4F2"/>
+      
+      <!-- Time Slots (6:00 AM to 00:00) -->
+      <!-- We generate marks every hour (180px gap) starting from x=460 -->
+      <text x="460" y="210" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C" text-anchor="middle">06:00 AM</text>
+      <text x="640" y="210" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C" text-anchor="middle">07:00 AM</text>
+      <text x="820" y="210" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C" text-anchor="middle">08:00 AM</text>
+      <text x="1000" y="210" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C" text-anchor="middle">09:00 AM</text>
+      <text x="1180" y="210" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C" text-anchor="middle">10:00 AM</text>
+      <text x="1360" y="210" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C" text-anchor="middle">11:00 AM</text>
+      <text x="1540" y="210" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C" text-anchor="middle">12:00 PM</text>
+      <text x="1720" y="210" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C" text-anchor="middle">01:00 PM</text>
+      
+      <!-- Vertical Grid Lines -->
+      <path d="M460 226 V 730" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+      <path d="M640 226 V 730" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+      <path d="M820 226 V 730" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+      <path d="M1000 226 V 730" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+      <path d="M1180 226 V 730" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+      <path d="M1360 226 V 730" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+      <path d="M1540 226 V 730" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+      <path d="M1720 226 V 730" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+
+      <!-- CURRENT TIME INDICATOR (e.g. 09:45 AM = 8:00AM + 1.75 * 180 = 820 + 315 = 1135) -->
+      <path d="M1135 181 V 730" stroke="#FF4D4D" stroke-width="2"/>
+      <circle cx="1135" cy="181" r="5" fill="#FF4D4D"/>
+      <rect x="1110" y="151" width="50" height="20" rx="4" fill="#FF4D4D"/>
+      <text x="1135" y="165" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">09:45</text>
+
+      <!-- DOCTOR ROW 1: Appts -->
+      <!-- 08:00 - 09:00 (1 hour = 180px width) -->
+      <rect x="825" y="245" width="170" height="90" rx="10" fill="#F0F4F2" stroke="#84A98C" stroke-width="1"/>
+      <text x="840" y="270" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#84A98C">John Doe</text>
+      <text x="840" y="290" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Room: Consult A</text>
+      <rect x="840" y="305" width="80" height="20" rx="6" fill="#84A98C" fill-opacity="0.2"/>
+      <text x="880" y="319" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#84A98C" text-anchor="middle">Completed</text>
+
+      <!-- 09:15 - 10:15 (0.25h offset = 45px. Width = 180px) -->
+      <rect x="1045" y="245" width="170" height="90" rx="10" fill="#E8F4F1" stroke="#52796F" stroke-width="2"/>
+      <text x="1060" y="270" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Sarah Jenkins</text>
+      <text x="1060" y="290" font-family="Arial, sans-serif" font-size="12" fill="#52796F">Room: Consult A</text>
+      <rect x="1060" y="305" width="80" height="20" rx="6" fill="#52796F" fill-opacity="0.2"/>
+      <text x="1100" y="319" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#52796F" text-anchor="middle">In Session</text>
+
+      <!-- 10:30 - 11:30 (0.5h offset = 90px. Width = 180px) -->
+      <rect x="1270" y="245" width="170" height="90" rx="10" fill="white" stroke="#CAD2C5" stroke-width="2"/>
+      <text x="1285" y="270" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Michael Scott</text>
+      <text x="1285" y="290" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Room: Consult A</text>
+      <rect x="1285" y="305" width="70" height="20" rx="6" fill="#F5A623" fill-opacity="0.2"/>
+      <text x="1320" y="319" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#F5A623" text-anchor="middle">Waiting</text>
+
+      <!-- DOCTOR ROW 2: Appts -->
+      <!-- 08:30 - 09:30 CANCELED -->
+      <rect x="910" y="375" width="170" height="90" rx="10" fill="#FFF0F0" stroke="#FF4D4D" stroke-width="1" stroke-dasharray="4 4"/>
+      <text x="925" y="400" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FF4D4D" text-decoration="line-through">Emily Blunt</text>
+      <text x="925" y="420" font-family="Arial, sans-serif" font-size="12" fill="#FF4D4D">Canceled by Patient</text>
+      <rect x="925" y="435" width="70" height="20" rx="6" fill="#FF4D4D" fill-opacity="0.1"/>
+      <text x="960" y="449" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#FF4D4D" text-anchor="middle">Canceled</text>
+
+      <!-- 10:00 - 11:30 (1.5 hours = 270px) -->
+      <rect x="1180" y="375" width="260" height="90" rx="10" fill="white" stroke="#CAD2C5" stroke-width="2"/>
+      <text x="1195" y="400" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">David Miller</text>
+      <text x="1195" y="420" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Room: Therapy 02</text>
+      <rect x="1195" y="435" width="80" height="20" rx="6" fill="#2F3E46" fill-opacity="0.1"/>
+      <text x="1235" y="449" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2F3E46" text-anchor="middle">Scheduled</text>
+
+      <!-- DOCTOR ROW 3: Appts -->
+      <!-- 09:30 - 10:00 (0.5 hour = 90px) -->
+      <rect x="1090" y="505" width="80" height="90" rx="10" fill="white" stroke="#CAD2C5" stroke-width="2"/>
+      <text x="1100" y="530" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2F3E46">A. Lee</text>
+      <text x="1100" y="550" font-family="Arial, sans-serif" font-size="11" fill="#84A98C">Rm 3</text>
+      <circle cx="1110" cy="575" r="5" fill="#F5A623"/>
+
+      <!-- 10:15 - 10:45 (0.5 hour = 90px) -->
+      <rect x="1225" y="505" width="80" height="90" rx="10" fill="white" stroke="#CAD2C5" stroke-width="2"/>
+      <text x="1235" y="530" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2F3E46">T. Ford</text>
+      <text x="1235" y="550" font-family="Arial, sans-serif" font-size="11" fill="#84A98C">Rm 3</text>
+      <circle cx="1245" cy="575" r="5" fill="#2F3E46" opacity="0.3"/>
+
+      <!-- 11:00 - 12:00 (1 hour = 180px) -->
+      <rect x="1360" y="505" width="170" height="90" rx="10" fill="white" stroke="#CAD2C5" stroke-width="2"/>
+      <text x="1375" y="530" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Nina Dobrev</text>
+      <text x="1375" y="550" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Room: Consult B</text>
+      <rect x="1375" y="565" width="80" height="20" rx="6" fill="#2F3E46" fill-opacity="0.1"/>
+      <text x="1415" y="579" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2F3E46" text-anchor="middle">Scheduled</text>
+
+      <!-- DOCTOR ROW 4: Appts -->
+      <!-- Doctor Unavailable Block -->
+      <rect x="820" y="635" width="1260" height="90" rx="10" fill="#F0F4F2" opacity="0.6"/>
+      <text x="1450" y="685" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#CAD2C5" text-anchor="middle">No Active Schedule for Today</text>
+
+    </g>
+  </g>
+
+  <!-- STICKY DOCTORS COLUMN (Left Side) -->
+  <rect x="290" y="181" width="170" height="560" fill="white"/>
+  <rect x="459" y="181" width="1" height="560" fill="#E2E8E4"/>
+  
+  <rect x="290" y="181" width="170" height="45" fill="#FAFCFB"/>
+  <text x="310" y="210" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C">Doctors</text>
+  <rect x="290" y="226" width="170" height="1" fill="#E2E8E4"/>
+
+  <!-- Row 1: Alice Vance -->
+  <rect x="290" y="227" width="170" height="130" fill="white"/>
+  <circle cx="320" cy="285" r="20" fill="#CAD2C5"/>
+  <text x="350" y="280" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Dr. Alice Vance</text>
+  <text x="350" y="300" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Cardiology</text>
+  <rect x="290" y="356" width="1000" height="1" fill="#E2E8E4"/> <!-- Horizontal Rule -->
+
+  <!-- Row 2: Robert Miles -->
+  <rect x="290" y="357" width="170" height="130" fill="#FAFCFB"/>
+  <circle cx="320" cy="415" r="20" fill="#CAD2C5"/>
+  <text x="350" y="410" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Dr. R. Miles</text>
+  <text x="350" y="430" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Neurology</text>
+  <rect x="290" y="486" width="1000" height="1" fill="#E2E8E4"/> <!-- Horizontal Rule -->
+
+  <!-- Row 3: K. Peterson -->
+  <rect x="290" y="487" width="170" height="130" fill="white"/>
+  <circle cx="320" cy="545" r="20" fill="#CAD2C5"/>
+  <text x="350" y="540" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Dr. K. Peterson</text>
+  <text x="350" y="560" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">General Practice</text>
+  <rect x="290" y="616" width="1000" height="1" fill="#E2E8E4"/> <!-- Horizontal Rule -->
+
+  <!-- Row 4: H. Kim -->
+  <rect x="290" y="617" width="170" height="123" fill="#FAFCFB"/>
+  <circle cx="320" cy="675" r="20" fill="#CAD2C5"/>
+  <text x="350" y="670" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#84A98C">Dr. H. Kim (Off)</text>
+  <text x="350" y="690" font-family="Arial, sans-serif" font-size="12" fill="#CAD2C5">Pediatrics</text>
+
+  <!-- CUSTOM HORIZONTAL SCROLLBAR -->
+  <rect x="460" y="750" width="710" height="12" rx="6" fill="#F0F4F2"/>
+  <!-- Thumb indicating the current scroll position (Scrolled to 08:00 AM) -->
+  <rect x="520" y="752" width="180" height="8" rx="4" fill="#CAD2C5"/>
+
+  <!-- Shadow Filter Definition -->
+  <defs>
+    <filter id="shadow" x="0" y="0" width="1200" height="800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#2F3E46" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+</svg>

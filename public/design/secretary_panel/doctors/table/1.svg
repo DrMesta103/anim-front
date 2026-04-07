@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%" style="background-color: #f4f7f9; font-family: 'Inter', -apple-system, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.05" />
+    </filter>
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.04" />
+    </filter>
+    <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <style>
+      .hover-card:hover { transform: translateY(-3px); transition: all 0.2s ease; cursor: pointer; }
+      .hover-card { transition: all 0.2s ease; }
+      .btn-hover:hover { opacity: 0.9; cursor: pointer; }
+    </style>
+  </defs>
+
+  <!-- SIDEBAR -->
+  <rect x="0" y="0" width="250" height="800" fill="#ffffff" filter="url(#shadow)" />
+  <text x="30" y="45" font-size="22" font-weight="bold" fill="#1E293B">MedAdmin</text>
+  <text x="30" y="65" font-size="12" font-weight="500" fill="#64748B">Secretary Panel</text>
+  
+  <g transform="translate(15, 100)">
+    <!-- Navigation Items -->
+    <rect x="0" y="0" width="220" height="44" rx="8" fill="#ffffff" class="btn-hover" />
+    <text x="45" y="27" font-size="14" fill="#64748B" font-weight="500">Appointments</text>
+    
+    <rect x="0" y="52" width="220" height="44" rx="8" fill="#EFF6FF" />
+    <text x="45" y="79" font-size="14" fill="#2563EB" font-weight="600">Doctor Schedules</text>
+    <rect x="5" y="60" width="4" height="28" rx="2" fill="#2563EB" />
+    
+    <rect x="0" y="104" width="220" height="44" rx="8" fill="#ffffff" class="btn-hover" />
+    <text x="45" y="131" font-size="14" fill="#64748B" font-weight="500">Canceled Schedules</text>
+    
+    <rect x="0" y="156" width="220" height="44" rx="8" fill="#ffffff" class="btn-hover" />
+    <text x="45" y="183" font-size="14" fill="#64748B" font-weight="500">Patients</text>
+  </g>
+
+  <!-- MAIN CONTENT HEADER -->
+  <rect x="250" y="0" width="950" height="80" fill="#ffffff" filter="url(#shadow)" />
+  <text x="290" y="48" font-size="24" font-weight="bold" fill="#0F172A">Doctor Schedules</text>
+
+  <!-- Search & Filter -->
+  <g transform="translate(640, 20)">
+    <rect x="0" y="0" width="280" height="40" rx="8" fill="#F8FAFC" stroke="#E2E8F0" />
+    <text x="35" y="25" font-size="14" fill="#94A3B8">Search doctor by name...</text>
+    <circle cx="20" cy="20" r="6" fill="none" stroke="#94A3B8" stroke-width="2" />
+    <line x1="24" y1="24" x2="30" y2="30" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" />
+  </g>
+  
+  <g transform="translate(940, 20)">
+    <rect x="0" y="0" width="170" height="40" rx="8" fill="#F8FAFC" stroke="#E2E8F0" class="btn-hover" />
+    <text x="15" y="25" font-size="14" fill="#475569">All Specialties</text>
+    <path d="M145 18 l4 4 l4 -4" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- DOCTOR CARDS GRID -->
+  <g transform="translate(290, 110)">
+    
+    <!-- Doctor Card 1 -->
+    <g class="hover-card" transform="translate(0, 0)">
+      <rect width="270" height="200" rx="12" fill="#ffffff" stroke="#E2E8F0" filter="url(#card-shadow)" />
+      <circle cx="135" cy="50" r="30" fill="#DBEAFE" />
+      <text x="135" y="55" font-size="20" font-weight="600" fill="#1E40AF" text-anchor="middle">SJ</text>
+      <text x="135" y="105" font-size="16" font-weight="600" fill="#0F172A" text-anchor="middle">Dr. Sarah Jenkins</text>
+      <text x="135" y="125" font-size="13" font-weight="500" fill="#2563EB" text-anchor="middle">Cardiology</text>
+      <line x1="20" y1="145" x2="250" y2="145" stroke="#F1F5F9" stroke-width="1" />
+      <rect x="20" y="155" width="230" height="32" rx="6" fill="#EFF6FF" class="btn-hover" />
+      <text x="135" y="176" font-size="13" font-weight="600" fill="#2563EB" text-anchor="middle">View &amp; Manage Schedule</text>
+    </g>
+
+    <!-- Doctor Card 2 -->
+    <g class="hover-card" transform="translate(290, 0)">
+      <rect width="270" height="200" rx="12" fill="#ffffff" stroke="#E2E8F0" filter="url(#card-shadow)" />
+      <circle cx="135" cy="50" r="30" fill="#FCE7F3" />
+      <text x="135" y="55" font-size="20" font-weight="600" fill="#9D174D" text-anchor="middle">MR</text>
+      <text x="135" y="105" font-size="16" font-weight="600" fill="#0F172A" text-anchor="middle">Dr. Michael Ross</text>
+      <text x="135" y="125" font-size="13" font-weight="500" fill="#2563EB" text-anchor="middle">Neurology</text>
+      <line x1="20" y1="145" x2="250" y2="145" stroke="#F1F5F9" stroke-width="1" />
+      <rect x="20" y="155" width="230" height="32" rx="6" fill="#EFF6FF" class="btn-hover" />
+      <text x="135" y="176" font-size="13" font-weight="600" fill="#2563EB" text-anchor="middle">View &amp; Manage Schedule</text>
+    </g>
+
+    <!-- Doctor Card 3 -->
+    <g class="hover-card" transform="translate(580, 0)">
+      <rect width="270" height="200" rx="12" fill="#ffffff" stroke="#E2E8F0" filter="url(#card-shadow)" />
+      <circle cx="135" cy="50" r="30" fill="#DCFCE7" />
+      <text x="135" y="55" font-size="20" font-weight="600" fill="#166534" text-anchor="middle">AL</text>
+      <text x="135" y="105" font-size="16" font-weight="600" fill="#0F172A" text-anchor="middle">Dr. Amanda Lin</text>
+      <text x="135" y="125" font-size="13" font-weight="500" fill="#2563EB" text-anchor="middle">Pediatrics</text>
+      <line x1="20" y1="145" x2="250" y2="145" stroke="#F1F5F9" stroke-width="1" />
+      <rect x="20" y="155" width="230" height="32" rx="6" fill="#EFF6FF" class="btn-hover" />
+      <text x="135" y="176" font-size="13" font-weight="600" fill="#2563EB" text-anchor="middle">View &amp; Manage Schedule</text>
+    </g>
+
+    <!-- Doctor Card 4 -->
+    <g class="hover-card" transform="translate(0, 220)">
+      <rect width="270" height="200" rx="12" fill="#ffffff" stroke="#E2E8F0" filter="url(#card-shadow)" />
+      <circle cx="135" cy="50" r="30" fill="#FEF3C7" />
+      <text x="135" y="55" font-size="20" font-weight="600" fill="#92400E" text-anchor="middle">DC</text>
+      <text x="135" y="105" font-size="16" font-weight="600" fill="#0F172A" text-anchor="middle">Dr. David Chen</text>
+      <text x="135" y="125" font-size="13" font-weight="500" fill="#2563EB" text-anchor="middle">Orthopedics</text>
+      <line x1="20" y1="145" x2="250" y2="145" stroke="#F1F5F9" stroke-width="1" />
+      <rect x="20" y="155" width="230" height="32" rx="6" fill="#EFF6FF" class="btn-hover" />
+      <text x="135" y="176" font-size="13" font-weight="600" fill="#2563EB" text-anchor="middle">View &amp; Manage Schedule</text>
+    </g>
+
+    <!-- Doctor Card 5 -->
+    <g class="hover-card" transform="translate(290, 220)">
+      <rect width="270" height="200" rx="12" fill="#ffffff" stroke="#E2E8F0" filter="url(#card-shadow)" />
+      <circle cx="135" cy="50" r="30" fill="#F3E8FF" />
+      <text x="135" y="55" font-size="20" font-weight="600" fill="#6B21A8" text-anchor="middle">EP</text>
+      <text x="135" y="105" font-size="16" font-weight="600" fill="#0F172A" text-anchor="middle">Dr. Emily Parker</text>
+      <text x="135" y="125" font-size="13" font-weight="500" fill="#2563EB" text-anchor="middle">Dermatology</text>
+      <line x1="20" y1="145" x2="250" y2="145" stroke="#F1F5F9" stroke-width="1" />
+      <rect x="20" y="155" width="230" height="32" rx="6" fill="#EFF6FF" class="btn-hover" />
+      <text x="135" y="176" font-size="13" font-weight="600" fill="#2563EB" text-anchor="middle">View &amp; Manage Schedule</text>
+    </g>
+
+    <!-- Doctor Card 6 -->
+    <g class="hover-card" transform="translate(580, 220)">
+      <rect width="270" height="200" rx="12" fill="#ffffff" stroke="#E2E8F0" filter="url(#card-shadow)" />
+      <circle cx="135" cy="50" r="30" fill="#E0E7FF" />
+      <text x="135" y="55" font-size="20" font-weight="600" fill="#3730A3" text-anchor="middle">RK</text>
+      <text x="135" y="105" font-size="16" font-weight="600" fill="#0F172A" text-anchor="middle">Dr. Robert King</text>
+      <text x="135" y="125" font-size="13" font-weight="500" fill="#2563EB" text-anchor="middle">General Practice</text>
+      <line x1="20" y1="145" x2="250" y2="145" stroke="#F1F5F9" stroke-width="1" />
+      <rect x="20" y="155" width="230" height="32" rx="6" fill="#EFF6FF" class="btn-hover" />
+      <text x="135" y="176" font-size="13" font-weight="600" fill="#2563EB" text-anchor="middle">View &amp; Manage Schedule</text>
+    </g>
+
+  </g>
+</svg>

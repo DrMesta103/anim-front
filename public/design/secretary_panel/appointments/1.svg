@@ -1,0 +1,190 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#F0F4F2"/>
+
+  <!-- SIDEBAR -->
+  <rect width="260" height="800" fill="white"/>
+  <rect x="259" y="0" width="1" height="800" fill="#CAD2C5"/> <!-- Border -->
+
+  <!-- Logo -->
+  <rect x="30" y="40" width="40" height="40" rx="10" fill="#CAD2C5"/>
+  <path d="M42 52C42 50.8954 42.8954 50 44 50H56C57.1046 50 58 50.8954 58 52V68C58 69.1046 57.1046 70 56 70H44C42.8954 70 42 69.1046 42 68V52Z" stroke="#52796F" stroke-width="2"/>
+  <text x="85" y="68" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2F3E46">SageClinic</text>
+
+  <!-- Sidebar Items -->
+  <text x="70" y="162" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#84A98C">Dashboard</text>
+  <circle cx="45" cy="155" r="3" fill="#84A98C"/>
+
+  <!-- Active State: Timeline / Schedules -->
+  <rect x="20" y="200" width="220" height="50" rx="12" fill="#52796F"/>
+  <text x="70" y="232" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="white">Appt. Timeline</text>
+  <circle cx="45" cy="225" r="3" fill="white"/>
+
+  <!-- Other Items -->
+  <text x="70" y="302" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Doctor Availability</text>
+  <text x="70" y="362" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Patients List</text>
+  <text x="70" y="422" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Cancellations</text>
+  <text x="70" y="482" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Daily Reports</text>
+
+  <!-- TOP BAR -->
+  <text x="290" y="60" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2F3E46">Secretary Panel</text>
+  
+  <!-- Add New Appointment Button -->
+  <rect x="880" y="35" width="160" height="40" rx="12" fill="#52796F" filter="url(#shadow)"/>
+  <text x="960" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">+ New Schedule</text>
+
+  <circle cx="1130" cy="55" r="20" fill="#CAD2C5"/>
+  <text x="1100" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46" text-anchor="end">Sarah (Sec)</text>
+
+  <!-- STATS WIDGETS -->
+  <rect x="290" y="90" width="280" height="90" rx="20" fill="white" filter="url(#shadow)"/>
+  <circle cx="330" cy="135" r="20" fill="#52796F" fill-opacity="0.1"/>
+  <text x="330" y="140" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">📅</text>
+  <text x="370" y="125" font-family="Arial, sans-serif" font-size="13" fill="#84A98C">Today's Appointments</text>
+  <text x="370" y="155" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2F3E46">84</text>
+
+  <rect x="590" y="90" width="280" height="90" rx="20" fill="white" filter="url(#shadow)"/>
+  <circle cx="630" cy="135" r="20" fill="#F5A623" fill-opacity="0.1"/>
+  <text x="630" y="140" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">👥</text>
+  <text x="670" y="125" font-family="Arial, sans-serif" font-size="13" fill="#84A98C">Active Doctors Present</text>
+  <text x="670" y="155" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2F3E46">6 / 8</text>
+
+  <rect x="890" y="90" width="280" height="90" rx="20" fill="white" filter="url(#shadow)"/>
+  <circle cx="930" cy="135" r="20" fill="#FF4D4D" fill-opacity="0.1"/>
+  <text x="930" y="140" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">❌</text>
+  <text x="970" y="125" font-family="Arial, sans-serif" font-size="13" fill="#84A98C">Canceled Today</text>
+  <text x="970" y="155" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FF4D4D">3</text>
+
+
+  <!-- TIMELINE CONTAINER -->
+  <rect x="290" y="210" width="880" height="550" rx="25" fill="white" filter="url(#shadow)"/>
+  
+  <text x="320" y="250" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2F3E46">Daily Schedule Timeline</text>
+  <text x="520" y="248" font-family="Arial, sans-serif" font-size="14" fill="#84A98C">March 29, 2026</text>
+
+  <!-- Timeline Controls -->
+  <rect x="980" y="225" width="160" height="34" rx="8" fill="#F0F4F2"/>
+  <text x="1060" y="247" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2F3E46" text-anchor="middle">Filter: All Specialties ▼</text>
+
+  <!-- Timeline Header (Time slots) -->
+  <rect x="290" y="270" width="880" height="40" fill="#F0F4F2"/>
+  <text x="450" y="295" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#84A98C" text-anchor="middle">08:00 AM</text>
+  <text x="570" y="295" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#84A98C" text-anchor="middle">09:00 AM</text>
+  <text x="690" y="295" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#84A98C" text-anchor="middle">10:00 AM</text>
+  <text x="810" y="295" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#84A98C" text-anchor="middle">11:00 AM</text>
+  <text x="930" y="295" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#84A98C" text-anchor="middle">12:00 PM</text>
+  <text x="1050" y="295" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#84A98C" text-anchor="middle">01:00 PM</text>
+
+  <!-- Vertical Grid Lines (1 hour = 120px) -->
+  <path d="M450 310 V 740" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+  <path d="M570 310 V 740" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+  <path d="M690 310 V 740" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+  <path d="M810 310 V 740" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+  <path d="M930 310 V 740" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+  <path d="M1050 310 V 740" stroke="#E2E8E4" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- CURRENT TIME INDICATOR (e.g. 09:45 AM = x: 660) -->
+  <path d="M660 270 V 740" stroke="#FF4D4D" stroke-width="2"/>
+  <circle cx="660" cy="270" r="5" fill="#FF4D4D"/>
+  <rect x="635" y="240" width="50" height="20" rx="4" fill="#FF4D4D"/>
+  <text x="660" y="254" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">09:45</text>
+
+  <!-- DOCTOR ROW 1 -->
+  <rect x="290" y="310" width="880" height="100" fill="white"/>
+  <rect x="290" y="409" width="880" height="1" fill="#E2E8E4"/>
+  <!-- Doctor Info -->
+  <circle cx="330" cy="360" r="18" fill="#CAD2C5"/>
+  <text x="360" y="355" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Dr. Alice Vance</text>
+  <text x="360" y="375" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Cardiology</text>
+  
+  <!-- Appointment Block 1 (Completed) 08:00 - 09:00 -->
+  <rect x="450" y="325" width="115" height="70" rx="8" fill="#F0F4F2" stroke="#84A98C" stroke-width="1"/>
+  <text x="460" y="345" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#84A98C">John Doe</text>
+  <text x="460" y="362" font-family="Arial, sans-serif" font-size="10" fill="#84A98C">Room: Consult A</text>
+  <rect x="460" y="372" width="60" height="16" rx="4" fill="#84A98C" fill-opacity="0.2"/>
+  <text x="490" y="383" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#84A98C" text-anchor="middle">Completed</text>
+
+  <!-- Appointment Block 2 (In Session) 09:15 - 10:15 -->
+  <rect x="590" y="325" width="115" height="70" rx="8" fill="#E8F4F1" stroke="#52796F" stroke-width="2"/>
+  <text x="600" y="345" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2F3E46">Sarah Jenkins</text>
+  <text x="600" y="362" font-family="Arial, sans-serif" font-size="10" fill="#52796F">Room: Consult A</text>
+  <rect x="600" y="372" width="65" height="16" rx="4" fill="#52796F" fill-opacity="0.2"/>
+  <text x="632" y="383" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#52796F" text-anchor="middle">In Session</text>
+
+  <!-- Appointment Block 3 (Waiting) 10:30 - 11:30 -->
+  <rect x="750" y="325" width="115" height="70" rx="8" fill="white" stroke="#CAD2C5" stroke-width="2"/>
+  <text x="760" y="345" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2F3E46">Michael Scott</text>
+  <text x="760" y="362" font-family="Arial, sans-serif" font-size="10" fill="#84A98C">Room: Consult A</text>
+  <rect x="760" y="372" width="55" height="16" rx="4" fill="#F5A623" fill-opacity="0.2"/>
+  <text x="787" y="383" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#F5A623" text-anchor="middle">Waiting</text>
+
+
+  <!-- DOCTOR ROW 2 -->
+  <rect x="290" y="410" width="880" height="100" fill="#FAFCFB"/>
+  <rect x="290" y="509" width="880" height="1" fill="#E2E8E4"/>
+  <!-- Doctor Info -->
+  <circle cx="330" cy="460" r="18" fill="#CAD2C5"/>
+  <text x="360" y="455" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Dr. Robert Miles</text>
+  <text x="360" y="475" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Neurology</text>
+  
+  <!-- Appointment Block 1 (CANCELED) 08:30 - 09:30 -->
+  <rect x="510" y="425" width="115" height="70" rx="8" fill="#FFF0F0" stroke="#FF4D4D" stroke-width="1" stroke-dasharray="2 2"/>
+  <text x="520" y="445" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FF4D4D" text-decoration="line-through">Emily Blunt</text>
+  <text x="520" y="462" font-family="Arial, sans-serif" font-size="10" fill="#FF4D4D">Canceled by Patient</text>
+  <rect x="520" y="472" width="60" height="16" rx="4" fill="#FF4D4D" fill-opacity="0.1"/>
+  <text x="550" y="483" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#FF4D4D" text-anchor="middle">Canceled</text>
+
+  <!-- Appointment Block 2 (Scheduled) 10:00 - 11:30 -->
+  <rect x="690" y="425" width="175" height="70" rx="8" fill="white" stroke="#CAD2C5" stroke-width="2"/>
+  <text x="700" y="445" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2F3E46">David Miller</text>
+  <text x="700" y="462" font-family="Arial, sans-serif" font-size="10" fill="#84A98C">Room: Therapy 02</text>
+  <rect x="700" y="472" width="65" height="16" rx="4" fill="#2F3E46" fill-opacity="0.1"/>
+  <text x="732" y="483" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#2F3E46" text-anchor="middle">Scheduled</text>
+
+
+  <!-- DOCTOR ROW 3 -->
+  <rect x="290" y="510" width="880" height="100" fill="white"/>
+  <rect x="290" y="609" width="880" height="1" fill="#E2E8E4"/>
+  <!-- Doctor Info -->
+  <circle cx="330" cy="560" r="18" fill="#CAD2C5"/>
+  <text x="360" y="555" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">Dr. K. Peterson</text>
+  <text x="360" y="575" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">General Practice</text>
+
+  <!-- Appointment Block 1 (Scheduled) 09:30 - 10:00 -->
+  <rect x="630" y="525" width="55" height="70" rx="8" fill="white" stroke="#CAD2C5" stroke-width="2"/>
+  <text x="640" y="545" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2F3E46">A. Lee</text>
+  <text x="640" y="562" font-family="Arial, sans-serif" font-size="9" fill="#84A98C">Rm 3</text>
+  <circle cx="645" cy="580" r="4" fill="#F5A623"/>
+
+  <!-- Appointment Block 2 (Scheduled) 10:15 - 10:45 -->
+  <rect x="720" y="525" width="55" height="70" rx="8" fill="white" stroke="#CAD2C5" stroke-width="2"/>
+  <text x="730" y="545" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2F3E46">T. Ford</text>
+  <text x="730" y="562" font-family="Arial, sans-serif" font-size="9" fill="#84A98C">Rm 3</text>
+  <circle cx="735" cy="580" r="4" fill="#2F3E46" opacity="0.3"/>
+
+  <!-- Appointment Block 3 (Scheduled) 11:00 - 12:00 -->
+  <rect x="810" y="525" width="115" height="70" rx="8" fill="white" stroke="#CAD2C5" stroke-width="2"/>
+  <text x="820" y="545" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2F3E46">Nina Dobrev</text>
+  <text x="820" y="562" font-family="Arial, sans-serif" font-size="10" fill="#84A98C">Room: Consult B</text>
+  <rect x="820" y="572" width="65" height="16" rx="4" fill="#2F3E46" fill-opacity="0.1"/>
+  <text x="852" y="583" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#2F3E46" text-anchor="middle">Scheduled</text>
+
+
+  <!-- DOCTOR ROW 4 (Not Active / Break Time) -->
+  <rect x="290" y="610" width="880" height="100" fill="#FAFCFB"/>
+  <!-- Doctor Info -->
+  <circle cx="330" cy="660" r="18" fill="#CAD2C5"/>
+  <text x="360" y="655" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#84A98C">Dr. H. Kim (Off)</text>
+  <text x="360" y="675" font-family="Arial, sans-serif" font-size="12" fill="#CAD2C5">Pediatrics</text>
+
+  <!-- Doctor Schedule Unavailable Block -->
+  <rect x="450" y="625" width="700" height="70" rx="8" fill="#F0F4F2" opacity="0.6"/>
+  <text x="800" y="665" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#CAD2C5" text-anchor="middle">No Active Schedule for Today</text>
+
+  <!-- Shadow Filter Definition -->
+  <defs>
+    <filter id="shadow" x="0" y="0" width="1200" height="800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#2F3E46" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+</svg>

@@ -1,0 +1,92 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for Shadows and Patterns -->
+  <defs>
+    <filter id="card-shadow" x="-50" y="-50" width="900" height="700" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#2F3E46" flood-opacity="0.06"/>
+    </filter>
+    <filter id="icon-shadow" x="250" y="50" width="300" height="300" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#52796F" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Presentation Background (Using theme's app background) -->
+  <rect width="800" height="600" fill="#F0F4F2"/>
+
+  <!-- Presentation Card Container -->
+  <rect x="80" y="50" width="640" height="500" rx="24" fill="white" filter="url(#card-shadow)"/>
+
+  <!-- Branding Label Badge -->
+  <rect x="120" y="80" width="130" height="28" rx="14" fill="#E8F4F1"/>
+  <circle cx="134" cy="94" r="4" fill="#52796F"/>
+  <text x="146" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#52796F" letter-spacing="1">BRAND IDENTITY</text>
+
+  <!-- Decorative Presentation Rings (Halo effect around logo) -->
+  <circle cx="400" cy="200" r="110" fill="none" stroke="#CAD2C5" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.6"/>
+  <circle cx="400" cy="200" r="150" fill="none" stroke="#CAD2C5" stroke-width="1" stroke-dasharray="2 6" opacity="0.3"/>
+
+  <!-- ========================================== -->
+  <!-- LOGO MARK (The Heart-Wing / Robin Concept) -->
+  <!-- ========================================== -->
+  <g filter="url(#icon-shadow)">
+    
+    <!-- Left Half: The Medical Heart -->
+    <!-- Represents care, life, and the clinic foundation -->
+    <path d="M 396 272 
+             C 330 220, 310 140, 360 125 
+             C 385 115, 396 145, 396 160 
+             L 396 272 Z" 
+          fill="#52796F"/>
+
+    <!-- Negative Space Medical Cross inside the Heart -->
+    <path d="M 356 173 H 364 V 181 H 372 V 189 H 364 V 197 H 356 V 189 H 348 V 181 H 356 Z" 
+          fill="white" opacity="0.95"/>
+
+    <!-- Right Half: The Robin Wing Feathers -->
+    <!-- Sliced into three distinct overlapping segments representing the bird -->
+
+    <!-- Feather 1 (Top): The Robin's Red Breast Accent -->
+    <!-- Uses the alert/accent red from the clinic theme -->
+    <path d="M 404 160 
+             C 440 115, 490 140, 480 180 
+             C 470 200, 430 203, 404 203 Z" 
+          fill="#D65A5A"/>
+
+    <!-- Feather 2 (Middle): Dark Slate -->
+    <!-- Grounds the logo and connects the color palette -->
+    <path d="M 404 207 
+             C 450 197, 495 217, 480 250 
+             C 460 265, 420 250, 404 243 Z" 
+          fill="#2F3E46"/>
+
+    <!-- Feather 3 (Bottom): Soft Sage Green -->
+    <!-- Tapers down to complete the heart silhouette -->
+    <path d="M 404 247 
+             C 435 237, 470 267, 440 292 
+             C 425 307, 409 287, 404 272 Z" 
+          fill="#84A98C"/>
+
+  </g>
+
+  <!-- ========================================== -->
+  <!-- LOGOTYPE (Typography)                      -->
+  <!-- ========================================== -->
+  
+  <!-- "Robin" - Bold, grounding, modern -->
+  <text x="400" y="380" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif" font-size="64" font-weight="800" fill="#2F3E46" text-anchor="middle" letter-spacing="-1">
+    Robin
+  </text>
+
+  <!-- "CLINIC" - Lighter, elegant, spaced out -->
+  <text x="400" y="440" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif" font-size="44" font-weight="300" fill="#52796F" text-anchor="middle" letter-spacing="4">
+    CLINIC
+  </text>
+
+  <!-- Sub-brand / Tagline -->
+  <text x="400" y="485" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#84A98C" text-anchor="middle" letter-spacing="7">
+    ADVANCED HEALTHCARE
+  </text>
+
+  <!-- Subtle Bottom Divider -->
+  <rect x="350" y="515" width="100" height="4" rx="2" fill="#E8F4F1"/>
+
+</svg>

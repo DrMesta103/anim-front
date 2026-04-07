@@ -1,0 +1,304 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Defs for Shadows and Gradients -->
+  <defs>
+    <filter id="shadow" x="0" y="0" width="1200" height="800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#2F3E46" flood-opacity="0.04"/>
+    </filter>
+    <filter id="btn-shadow" x="0" y="0" width="160" height="60" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#2F3E46" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#F0F4F2"/>
+
+  <!-- ========================================== -->
+  <!-- SIDEBAR (Matching Theme)                   -->
+  <!-- ========================================== -->
+  <rect width="260" height="800" fill="white"/>
+  <rect x="259" y="0" width="1" height="800" fill="#CAD2C5"/>
+
+  <!-- Logo -->
+  <rect x="30" y="40" width="40" height="40" rx="10" fill="#CAD2C5"/>
+  <path d="M42 52C42 50.8954 42.8954 50 44 50H56C57.1046 50 58 50.8954 58 52V68C58 69.1046 57.1046 70 56 70H44C42.8954 70 42 69.1046 42 68V52Z" stroke="#52796F" stroke-width="2"/>
+  <text x="85" y="68" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2F3E46">SageClinic</text>
+
+  <!-- Sidebar Items -->
+  <text x="70" y="162" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Dashboard</text>
+  <text x="70" y="222" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Appts. Management</text>
+
+  <!-- Active State: Doctor Availability -->
+  <rect x="20" y="260" width="220" height="50" rx="12" fill="#52796F"/>
+  <text x="70" y="292" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="white">Doctor Availability</text>
+  <circle cx="45" cy="285" r="3" fill="white"/>
+
+  <!-- Other Items -->
+  <text x="70" y="362" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Patients List</text>
+  <text x="70" y="422" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Cancellations</text>
+  <text x="70" y="482" font-family="Arial, sans-serif" font-size="15" fill="#84A98C">Daily Reports</text>
+
+  <!-- ========================================== -->
+  <!-- TOP BAR                                    -->
+  <!-- ========================================== -->
+  <!-- Back Button to Directory -->
+  <g style="cursor: pointer;">
+    <rect x="290" y="40" width="30" height="30" rx="8" fill="#E8F4F1"/>
+    <text x="305" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#52796F" text-anchor="middle">←</text>
+    <text x="330" y="60" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#52796F">Back to Directory</text>
+  </g>
+  
+  <text x="500" y="60" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2F3E46">|</text>
+  <text x="520" y="60" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2F3E46">Schedule &amp; Shifts</text>
+
+  <circle cx="1130" cy="55" r="20" fill="#CAD2C5"/>
+  <text x="1100" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46" text-anchor="end">Sarah (Sec)</text>
+
+  <!-- ========================================== -->
+  <!-- MAIN CONTAINER                             -->
+  <!-- ========================================== -->
+  <rect x="290" y="95" width="880" height="680" rx="20" fill="white" filter="url(#shadow)"/>
+
+  <!-- Header: Doctor Profile & Actions -->
+  <circle cx="340" cy="145" r="24" fill="#E8F4F1"/>
+  <text x="340" y="151" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#52796F" text-anchor="middle">AV</text>
+  
+  <text x="380" y="140" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2F3E46">Dr. Alice Vance</text>
+  <text x="380" y="160" font-family="Arial, sans-serif" font-size="13" fill="#84A98C">Head of Cardiology  •  Staff ID: #4092</text>
+
+  <!-- Quick Stats -->
+  <rect x="620" y="125" width="1" height="40" fill="#E2E8E4"/>
+  <text x="640" y="140" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Weekly Hours</text>
+  <text x="640" y="160" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2F3E46">36h 00m</text>
+
+  <rect x="740" y="125" width="1" height="40" fill="#E2E8E4"/>
+  <text x="760" y="140" font-family="Arial, sans-serif" font-size="12" fill="#84A98C">Status</text>
+  <circle cx="766" cy="155" r="4" fill="#52796F"/>
+  <text x="776" y="160" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46">On Duty</text>
+
+  <!-- Actions -->
+  <rect x="910" y="125" width="110" height="40" rx="10" fill="#FAFCFB" stroke="#E2E8E4" stroke-width="1"/>
+  <text x="965" y="150" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2F3E46" text-anchor="middle">Add Leave</text>
+
+  <rect x="1030" y="125" width="110" height="40" rx="10" fill="#52796F" filter="url(#btn-shadow)"/>
+  <text x="1085" y="150" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">Edit Shifts</text>
+
+  <rect x="290" y="190" width="880" height="1" fill="#E2E8E4"/>
+
+  <!-- ========================================== -->
+  <!-- CALENDAR CONTROLS                          -->
+  <!-- ========================================== -->
+  <rect x="320" y="215" width="30" height="30" rx="8" fill="#F0F4F2"/>
+  <text x="335" y="235" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46" text-anchor="middle">&lt;</text>
+  
+  <text x="365" y="235" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2F3E46">April 2026</text>
+  
+  <rect x="455" y="215" width="30" height="30" rx="8" fill="#F0F4F2"/>
+  <text x="470" y="235" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2F3E46" text-anchor="middle">&gt;</text>
+
+  <!-- View Toggle (Month Active) -->
+  <rect x="940" y="210" width="200" height="40" rx="10" fill="#F0F4F2"/>
+  <rect x="1074" y="214" width="64" height="32" rx="8" fill="white" filter="url(#btn-shadow)"/>
+  <text x="974" y="235" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C" text-anchor="middle">Day</text>
+  <text x="1040" y="235" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#84A98C" text-anchor="middle">Week</text>
+  <text x="1106" y="235" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2F3E46" text-anchor="middle">Month</text>
+
+  <!-- ========================================== -->
+  <!-- MONTHLY GRID                               -->
+  <!-- ========================================== -->
+  <!-- Area: X:320 to 1139 (Width 819). Y:260 to 740 (Height 480). 7 cols x 5 rows. -->
+  
+  <!-- Weekend Backgrounds -->
+  <rect x="905" y="260" width="117" height="480" fill="#FAFCFB" opacity="0.6"/>
+  <rect x="1022" y="260" width="117" height="480" fill="#FAFCFB" opacity="0.6"/>
+
+  <!-- Current Day Background Highlight (April 2nd - Thursday) -->
+  <rect x="671" y="290" width="117" height="90" fill="#E8F4F1" opacity="0.4"/>
+
+  <!-- Day Headers -->
+  <rect x="320" y="260" width="819" height="30" fill="#F0F4F2"/>
+  <g font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#52796F" text-anchor="middle">
+    <text x="378.5" y="280">Mon</text>
+    <text x="495.5" y="280">Tue</text>
+    <text x="612.5" y="280">Wed</text>
+    <text x="729.5" y="280">Thu</text>
+    <text x="846.5" y="280">Fri</text>
+    <text x="963.5" y="280" fill="#84A98C">Sat</text>
+    <text x="1080.5" y="280" fill="#84A98C">Sun</text>
+  </g>
+
+  <!-- Grid Lines -->
+  <g stroke="#E2E8E4" stroke-width="1">
+    <!-- Vertical Lines -->
+    <line x1="320" y1="260" x2="320" y2="740"/>
+    <line x1="437" y1="260" x2="437" y2="740"/>
+    <line x1="554" y1="260" x2="554" y2="740"/>
+    <line x1="671" y1="260" x2="671" y2="740"/>
+    <line x1="788" y1="260" x2="788" y2="740"/>
+    <line x1="905" y1="260" x2="905" y2="740"/>
+    <line x1="1022" y1="260" x2="1022" y2="740"/>
+    <line x1="1139" y1="260" x2="1139" y2="740"/>
+    
+    <!-- Horizontal Lines -->
+    <line x1="320" y1="290" x2="1139" y2="290"/>
+    <line x1="320" y1="380" x2="1139" y2="380"/>
+    <line x1="320" y1="470" x2="1139" y2="470"/>
+    <line x1="320" y1="560" x2="1139" y2="560"/>
+    <line x1="320" y1="650" x2="1139" y2="650"/>
+    <line x1="320" y1="740" x2="1139" y2="740"/>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- DATE NUMBERS                               -->
+  <!-- ========================================== -->
+  <g font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="end">
+    <!-- Row 1 -->
+    <text x="425" y="310" fill="#CAD2C5">30</text>
+    <text x="542" y="310" fill="#CAD2C5">31</text>
+    <text x="659" y="310" fill="#2F3E46">1</text>
+    <!-- Current Day (April 2) -->
+    <circle cx="776" cy="305" r="12" fill="#52796F"/>
+    <text x="780" y="310" fill="white">2</text>
+    <text x="893" y="310" fill="#2F3E46">3</text>
+    <text x="1010" y="310" fill="#84A98C">4</text>
+    <text x="1127" y="310" fill="#84A98C">5</text>
+
+    <!-- Row 2 -->
+    <text x="425" y="400" fill="#2F3E46">6</text>
+    <text x="542" y="400" fill="#2F3E46">7</text>
+    <text x="659" y="400" fill="#2F3E46">8</text>
+    <text x="776" y="400" fill="#2F3E46">9</text>
+    <text x="893" y="400" fill="#2F3E46">10</text>
+    <text x="1010" y="400" fill="#84A98C">11</text>
+    <text x="1127" y="400" fill="#84A98C">12</text>
+
+    <!-- Row 3 -->
+    <text x="425" y="490" fill="#2F3E46">13</text>
+    <text x="542" y="490" fill="#2F3E46">14</text>
+    <text x="659" y="490" fill="#2F3E46">15</text>
+    <text x="776" y="490" fill="#2F3E46">16</text>
+    <text x="893" y="490" fill="#2F3E46">17</text>
+    <text x="1010" y="490" fill="#84A98C">18</text>
+    <text x="1127" y="490" fill="#84A98C">19</text>
+
+    <!-- Row 4 -->
+    <text x="425" y="580" fill="#2F3E46">20</text>
+    <text x="542" y="580" fill="#2F3E46">21</text>
+    <text x="659" y="580" fill="#2F3E46">22</text>
+    <text x="776" y="580" fill="#2F3E46">23</text>
+    <text x="893" y="580" fill="#2F3E46">24</text>
+    <text x="1010" y="580" fill="#84A98C">25</text>
+    <text x="1127" y="580" fill="#84A98C">26</text>
+
+    <!-- Row 5 -->
+    <text x="425" y="670" fill="#2F3E46">27</text>
+    <text x="542" y="670" fill="#2F3E46">28</text>
+    <text x="659" y="670" fill="#2F3E46">29</text>
+    <text x="776" y="670" fill="#2F3E46">30</text>
+    <text x="893" y="670" fill="#CAD2C5">1</text>
+    <text x="1010" y="670" fill="#CAD2C5">2</text>
+    <text x="1127" y="670" fill="#CAD2C5">3</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- EVENTS / SHIFT BLOCKS                      -->
+  <!-- ========================================== -->
+
+  <!-- ROW 1 (April 1-5) -->
+  <!-- Wed 1 -->
+  <rect x="558" y="325" width="109" height="18" rx="4" fill="#FAFCFB" stroke="#CAD2C5" stroke-width="1"/>
+  <text x="564" y="338" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#84A98C">10a Admin / R&amp;D</text>
+  <!-- Thu 2 -->
+  <rect x="675" y="325" width="109" height="18" rx="4" fill="#E8F4F1" stroke="#52796F" stroke-width="1"/>
+  <text x="681" y="338" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#52796F">8a Clinic Consult.</text>
+  <rect x="675" y="347" width="109" height="18" rx="4" fill="#FDF3E1" stroke="#E68A00" stroke-width="1" stroke-dasharray="2 2"/>
+  <text x="681" y="360" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#E68A00">2p On-Call</text>
+  <!-- Fri 3 -->
+  <rect x="792" y="325" width="109" height="18" rx="4" fill="#F4F6FB" stroke="#4A6572" stroke-width="1"/>
+  <text x="798" y="338" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4A6572">8a Ward Rounds</text>
+  <rect x="792" y="347" width="109" height="18" rx="4" fill="#E8F4F1" stroke="#52796F" stroke-width="1"/>
+  <text x="798" y="360" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#52796F">12p Clinic Consult.</text>
+
+  <!-- ROW 2 (April 6-12) -->
+  <!-- Mon 6 -->
+  <rect x="324" y="415" width="109" height="18" rx="4" fill="#E8F4F1" stroke="#52796F" stroke-width="1"/>
+  <text x="330" y="428" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#52796F">8a Clinic Consult.</text>
+  <rect x="324" y="437" width="109" height="18" rx="4" fill="#F4F6FB" stroke="#4A6572" stroke-width="1"/>
+  <text x="330" y="450" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4A6572">1p Ward Rounds</text>
+  <!-- Tue 7 -->
+  <rect x="441" y="415" width="109" height="18" rx="4" fill="#FDF3E1" stroke="#E68A00" stroke-width="1"/>
+  <text x="447" y="428" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#E68A00">9a Surgery (OR 2)</text>
+  <!-- Wed 8 -->
+  <rect x="558" y="415" width="109" height="18" rx="4" fill="#FAFCFB" stroke="#CAD2C5" stroke-width="1"/>
+  <text x="564" y="428" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#84A98C">10a Admin / R&amp;D</text>
+  <!-- Thu 9 -->
+  <rect x="675" y="415" width="109" height="18" rx="4" fill="#E8F4F1" stroke="#52796F" stroke-width="1"/>
+  <text x="681" y="428" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#52796F">8a Clinic Consult.</text>
+  <rect x="675" y="437" width="109" height="18" rx="4" fill="#FDF3E1" stroke="#E68A00" stroke-width="1" stroke-dasharray="2 2"/>
+  <text x="681" y="450" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#E68A00">2p On-Call</text>
+  <!-- Fri 10 -->
+  <rect x="792" y="415" width="109" height="18" rx="4" fill="#F4F6FB" stroke="#4A6572" stroke-width="1"/>
+  <text x="798" y="428" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4A6572">8a Ward Rounds</text>
+  <rect x="792" y="437" width="109" height="18" rx="4" fill="#E8F4F1" stroke="#52796F" stroke-width="1"/>
+  <text x="798" y="450" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#52796F">12p Clinic Consult.</text>
+
+  <!-- ROW 3 (April 13-19) -->
+  <!-- Mon 13 -->
+  <rect x="324" y="505" width="109" height="18" rx="4" fill="#E8F4F1" stroke="#52796F" stroke-width="1"/>
+  <text x="330" y="518" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#52796F">8a Clinic Consult.</text>
+  <rect x="324" y="527" width="109" height="18" rx="4" fill="#F4F6FB" stroke="#4A6572" stroke-width="1"/>
+  <text x="330" y="540" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4A6572">1p Ward Rounds</text>
+  <!-- Tue 14 -->
+  <rect x="441" y="505" width="109" height="18" rx="4" fill="#FDF3E1" stroke="#E68A00" stroke-width="1"/>
+  <text x="447" y="518" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#E68A00">9a Surgery (OR 2)</text>
+  <!-- Wed 15 (Exception: Conference) -->
+  <rect x="558" y="505" width="109" height="18" rx="4" fill="#FDEFEF" stroke="#D65A5A" stroke-width="1"/>
+  <text x="564" y="518" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#D65A5A">Medical Conf.</text>
+  <!-- Thu 16 -->
+  <rect x="675" y="505" width="109" height="18" rx="4" fill="#E8F4F1" stroke="#52796F" stroke-width="1"/>
+  <text x="681" y="518" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#52796F">8a Clinic Consult.</text>
+  <rect x="675" y="527" width="109" height="18" rx="4" fill="#FDF3E1" stroke="#E68A00" stroke-width="1" stroke-dasharray="2 2"/>
+  <text x="681" y="540" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#E68A00">2p On-Call</text>
+  <!-- Fri 17 -->
+  <rect x="792" y="505" width="109" height="18" rx="4" fill="#F4F6FB" stroke="#4A6572" stroke-width="1"/>
+  <text x="798" y="518" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4A6572">8a Ward Rounds</text>
+  <rect x="792" y="527" width="109" height="18" rx="4" fill="#E8F4F1" stroke="#52796F" stroke-width="1"/>
+  <text x="798" y="540" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#52796F">12p Clinic Consult.</text>
+
+  <!-- ROW 4 (April 20-26) -->
+  <!-- Mon 20 -->
+  <rect x="324" y="595" width="109" height="18" rx="4" fill="#E8F4F1" stroke="#52796F" stroke-width="1"/>
+  <text x="330" y="608" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#52796F">8a Clinic Consult.</text>
+  <rect x="324" y="617" width="109" height="18" rx="4" fill="#F4F6FB" stroke="#4A6572" stroke-width="1"/>
+  <text x="330" y="630" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4A6572">1p Ward Rounds</text>
+  <!-- Tue 21 -->
+  <rect x="441" y="595" width="109" height="18" rx="4" fill="#FDF3E1" stroke="#E68A00" stroke-width="1"/>
+  <text x="447" y="608" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#E68A00">9a Surgery (OR 2)</text>
+  <!-- Wed 22 -->
+  <rect x="558" y="595" width="109" height="18" rx="4" fill="#FAFCFB" stroke="#CAD2C5" stroke-width="1"/>
+  <text x="564" y="608" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#84A98C">10a Admin / R&amp;D</text>
+  <!-- Thu 23 (Exception: Annual Leave) -->
+  <rect x="675" y="595" width="109" height="40" rx="4" fill="#F0F4F2" stroke="#CAD2C5" stroke-width="1" stroke-dasharray="2 2"/>
+  <text x="729.5" y="619" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#84A98C" text-anchor="middle">Annual Leave</text>
+  <!-- Fri 24 (Exception: Annual Leave) -->
+  <rect x="792" y="595" width="109" height="40" rx="4" fill="#F0F4F2" stroke="#CAD2C5" stroke-width="1" stroke-dasharray="2 2"/>
+  <text x="846.5" y="619" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#84A98C" text-anchor="middle">Annual Leave</text>
+
+  <!-- ROW 5 (April 27- May 3) -->
+  <!-- Mon 27 -->
+  <rect x="324" y="685" width="109" height="18" rx="4" fill="#E8F4F1" stroke="#52796F" stroke-width="1"/>
+  <text x="330" y="698" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#52796F">8a Clinic Consult.</text>
+  <rect x="324" y="707" width="109" height="18" rx="4" fill="#F4F6FB" stroke="#4A6572" stroke-width="1"/>
+  <text x="330" y="720" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4A6572">1p Ward Rounds</text>
+  <!-- Tue 28 -->
+  <rect x="441" y="685" width="109" height="18" rx="4" fill="#FDF3E1" stroke="#E68A00" stroke-width="1"/>
+  <text x="447" y="698" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#E68A00">9a Surgery (OR 2)</text>
+  <!-- Wed 29 -->
+  <rect x="558" y="685" width="109" height="18" rx="4" fill="#FAFCFB" stroke="#CAD2C5" stroke-width="1"/>
+  <text x="564" y="698" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#84A98C">10a Admin / R&amp;D</text>
+  <!-- Thu 30 -->
+  <rect x="675" y="685" width="109" height="18" rx="4" fill="#E8F4F1" stroke="#52796F" stroke-width="1"/>
+  <text x="681" y="698" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#52796F">8a Clinic Consult.</text>
+  <rect x="675" y="707" width="109" height="18" rx="4" fill="#FDF3E1" stroke="#E68A00" stroke-width="1" stroke-dasharray="2 2"/>
+  <text x="681" y="720" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#E68A00">2p On-Call</text>
+
+</svg>
