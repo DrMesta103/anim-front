@@ -1,14 +1,18 @@
-import { GroupOfDoctors } from "../../types";
+import { AppDispatch } from "@/store";
+import { DoctorProf, GroupOfDoctors } from "../../types";
 import StatusDot from "./StatusDot";
+import { useDispatch } from "react-redux";
+import { fetchSelectedDoctorThunk } from "../../hooks";
 
-export default function DoctorCard({ doctor, isActive, onClick }: { doctor: GroupOfDoctors["doctors"]; isActive: boolean; onClick: () => void }) {
-  const { doctor: user, deletedAt } = doctor as any;
+export default function DoctorCard({ doctor, isActive, onClick }: { doctor: DoctorProf; isActive: boolean; onClick: () => void }) {
+  const { doctor: user, deletedAt } = doctor;
   const initials = `${user.firstname[0]} ${user.lastname[0]}`;
   const fullName = `${user.firstname} ${user.lastname}`;
+  const dispatch: AppDispatch = useDispatch();
 
   return (
     <div
-      onClick={onClick}
+      onClick={() => dispatch(fetchSelectedDoctorThunk({ id: user.id }))}
       className={`rounded-xl cursor-pointer flex-shrink-0 w-64 transition-all duration-200 border-2 ${
         isActive
           ? "bg-white border-[#52796F] shadow-md"

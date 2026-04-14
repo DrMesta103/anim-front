@@ -30,7 +30,7 @@ export default function SpecialtySection({
           .map((doctor, idx) => (
             <DoctorCard
               key={doctor.id}
-              doctor={doctor as any}
+              doctor={doctor}
               isActive={activeIndex === sectionStartIndex + idx}
               onClick={() => onCardClick(sectionStartIndex + idx)}
             />

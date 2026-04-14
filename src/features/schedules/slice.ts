@@ -1,12 +1,16 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { GroupOfDoctors, ScheduleState } from "./types";
-import { fetchAllGroupsOfSpecialtiesThunk } from "./hooks";
+import { fetchAllGroupsOfSpecialtiesThunk, fetchSelectedDoctorThunk } from "./hooks";
+import { Doctor } from "../doctors/types";
 
 const initialState: ScheduleState = {
   status: "idle",
   groups: [],
   search: "",
   selectedSpecialtyId: "",
+  selectedDoctor: null,
+  doctorSchedules: [],
+  schedulePage: 0,
 };
 
 const scheduleSlice = createSlice({
@@ -18,6 +22,12 @@ const scheduleSlice = createSlice({
     },
     setSelectedSpecialtyId: (state, action: PayloadAction<string>) => {
       state.selectedSpecialtyId = action.payload;
+    },
+    setSelectedDoctor: (state, action: PayloadAction<Doctor | null>) => {
+      state.selectedDoctor = action.payload;
+    },
+    setSchedulePage: (state, action: PayloadAction<number>) => {
+      state.schedulePage = action.payload;
     },
   },
   extraReducers: (builder) =>
@@ -33,8 +43,20 @@ const scheduleSlice = createSlice({
       })
       .addCase(fetchAllGroupsOfSpecialtiesThunk.rejected, (state) => {
         state.status = "error";
+      })
+      .addCase(fetchSelectedDoctorThunk.pending, (state) => {
+        state.status = "pending";
+      })
+      .addCase(fetchSelectedDoctorThunk.fulfilled, (state, action: PayloadAction<Doctor>) => {
+        state.status = "success";
+        if (action.payload) {
+          state.selectedDoctor = action.payload;
+        }
+      })
+      .addCase(fetchSelectedDoctorThunk.rejected, (state) => {
+        state.status = "error";
       }),
 });
 
-export const { setSearch, setSelectedSpecialtyId } = scheduleSlice.actions;
+export const { setSearch, setSelectedSpecialtyId, setSelectedDoctor, setSchedulePage } = scheduleSlice.actions;
 export default scheduleSlice.reducer;

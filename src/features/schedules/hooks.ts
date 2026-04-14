@@ -7,3 +7,10 @@ export const fetchAllGroupsOfSpecialtiesThunk = createAsyncThunk("/schedules/spe
     .then((res) => res.data.data)
     .catch(() => false);
 });
+
+export const fetchSelectedDoctorThunk = createAsyncThunk("/schedules/doctor/get", async ({ id }: { id: string }) => {
+  return await axios
+    .get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/secretary/users/doctor/${id}`, { withCredentials: true })
+    .then((res) => res.data.data)
+    .catch(() => false);
+});

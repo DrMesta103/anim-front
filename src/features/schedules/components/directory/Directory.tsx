@@ -7,6 +7,7 @@ import { fetchAllGroupsOfSpecialtiesThunk } from "../../hooks";
 import { GroupOfDoctors } from "../../types";
 import SpecialtySection from "./SpecialtySection";
 import { setSearch, setSelectedSpecialtyId } from "../../slice";
+import DoctorSchedules from "../schedules/DoctorSchedules";
 
 function buildIndexMap(data: GroupOfDoctors[]) {
   const map: { sectionIndex: number; positionInSection: number }[] = [];
@@ -19,7 +20,7 @@ function buildIndexMap(data: GroupOfDoctors[]) {
 
 export default function DoctorDirectory() {
   const dispatch: AppDispatch = useDispatch();
-  const { groups, status, search, selectedSpecialtyId } = useSelector((state: RootState) => state.schedules);
+  const { groups, status, search, selectedSpecialtyId, selectedDoctor } = useSelector((state: RootState) => state.schedules);
 
   const [activeCardIndex, setActiveCardIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -74,6 +75,8 @@ export default function DoctorDirectory() {
   }, [totalCards, indexMap, groups]);
 
   let cardCounter = 0;
+
+  if (selectedDoctor) return <DoctorSchedules />;
 
   return (
     <div className="bg-[#F0F4F2] min-h-screen p-4 flex" dir="rtl">
