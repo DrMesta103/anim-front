@@ -32,6 +32,11 @@ const loginSlice = createSlice({
       })
       .addCase(loginThunk.fulfilled, (state, action) => {
         if (action.payload) {
+          const token = action.payload?.data?.token || action.payload?.token;
+          if (token && typeof document !== "undefined") {
+            const isSecure = location.protocol === "https:";
+            document.cookie = `token=${token}; path=/; max-age=86400; SameSite=Lax${isSecure ? "; Secure" : ""}`;
+          }
           state.status = "success";
           location.replace("/admin");
         }

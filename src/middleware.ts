@@ -11,25 +11,46 @@ export async function middleware(req: NextRequest) {
   const token = req.cookies.get("token")?.value;
   const pathname = req.nextUrl.pathname;
 
-  const role = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL_LOCAL}/auth/role`, {
-    method: "GET",
-    headers: {
-      cookie: `token=${token}`,
-    },
-  })
-    .then((res) => res.json())
-    .then((res) => res.data.role)
-    .catch(() => undefined);
+  const backendUrl =
+    process.env.INTERNAL_BACKEND_URL ||
+    process.env.NEXT_PUBLIC_BACKEND_URL ||
+    process.env.NEXT_PUBLIC_BACKEND_URL_LOCAL ||
+    "http://localhost:4000";
+
+  let role: string | undefined = undefined;
+
+  if (token) {
+    try {
+      const res = await fetch(`${backendUrl}/auth/role`, {
+        method: "GET",
+        headers: {
+          cookie: `token=${token}`,
+          Authorization: `Bearer ${token}`,
+        },
+        cache: "no-store",
+      });
+
+      if (res.ok) {
+        const json = await res.json();
+        role = json?.data?.role || json?.role;
+      } else {
+        console.error(`Middleware auth check failed (status ${res.status}) for ${pathname}`);
+      }
+    } catch (err) {
+      console.error("Middleware fetch error:", err);
+    }
+  }
 
   for (const path in routeConfig) {
-    if (path.startsWith(pathname)) {
+    if (pathname.startsWith(path)) {
       if (!routeConfig[path].requiresAuth) {
         if (role) {
           return NextResponse.redirect(new URL(`/${role}`, req.url));
         }
         return NextResponse.next();
       }
-      if (!routeConfig[path].allowedRoles?.includes(role)) {
+
+      if (!role || !routeConfig[path].allowedRoles?.includes(role)) {
         if (role) {
           return NextResponse.redirect(new URL(`/${role}`, req.url));
         }

@@ -19,6 +19,11 @@ export const loginThunk = createAsyncThunk("/login", async (data: LoginDataType)
   return await axios
     .post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/login`, data, { withCredentials: true })
     .then((res) => {
+      const token = res.data?.data?.token || res.data?.token;
+      if (token && typeof document !== "undefined") {
+        const isSecure = location.protocol === "https:";
+        document.cookie = `token=${token}; path=/; max-age=86400; SameSite=Lax${isSecure ? "; Secure" : ""}`;
+      }
       return res.data;
     })
     .catch((err) => {
