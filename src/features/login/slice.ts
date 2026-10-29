@@ -34,11 +34,13 @@ const loginSlice = createSlice({
         if (action.payload) {
           const token = action.payload?.data?.token || action.payload?.token;
           if (token && typeof document !== "undefined") {
-            const isSecure = location.protocol === "https:";
+            const isSecure = typeof window !== "undefined" && window.location.protocol === "https:";
             document.cookie = `token=${token}; path=/; max-age=86400; SameSite=Lax${isSecure ? "; Secure" : ""}`;
           }
           state.status = "success";
-          location.replace("/admin");
+          if (typeof window !== "undefined") {
+            window.location.replace("/admin");
+          }
         }
         state.data.password = "";
       })

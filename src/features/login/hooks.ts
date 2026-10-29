@@ -21,7 +21,7 @@ export const loginThunk = createAsyncThunk("/login", async (data: LoginDataType)
     .then((res) => {
       const token = res.data?.data?.token || res.data?.token;
       if (token && typeof document !== "undefined") {
-        const isSecure = location.protocol === "https:";
+        const isSecure = typeof window !== "undefined" && window.location.protocol === "https:";
         document.cookie = `token=${token}; path=/; max-age=86400; SameSite=Lax${isSecure ? "; Secure" : ""}`;
       }
       return res.data;

@@ -41,6 +41,14 @@ export async function middleware(req: NextRequest) {
     }
   }
 
+  // Handle root path /
+  if (pathname === "/") {
+    if (role) {
+      return NextResponse.redirect(new URL(`/${role}`, req.url));
+    }
+    return NextResponse.redirect(new URL("/login", req.url));
+  }
+
   for (const path in routeConfig) {
     if (pathname.startsWith(path)) {
       if (!routeConfig[path].requiresAuth) {
